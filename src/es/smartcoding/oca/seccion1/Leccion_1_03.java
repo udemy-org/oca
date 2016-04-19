@@ -3,6 +3,8 @@
  */
 package es.smartcoding.oca.seccion1;
 
+import java.util.Random;
+
 /**
  * @author pep
  * 
@@ -19,8 +21,8 @@ public class Leccion_1_03 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Random r = new Random();
+		System.out.println(r.nextDouble());
 	}
 
 }

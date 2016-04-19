@@ -23,3 +23,11 @@ public class Leccion_1_01 {
 	}
 
 }
+
+/*
+ * La mayoría de las clases se escriben en su propio fichero con extensión Java.
+ * Pero es totalmente válido tener más de una clase (no pública) en un mismo
+ * fichero.
+ */
+class Vehiculo {
+}
