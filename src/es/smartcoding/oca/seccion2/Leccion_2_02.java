@@ -11,8 +11,8 @@ package es.smartcoding.oca.seccion2;
  *         En esta lección revisaremos los operadores aritméticos binarios, como
  *         la suma, resta, etc.
  * 
- *         Todos son familiares, aunque los operadores + y += aplicados a las
- *         cadenas actúan como una concatenación de cadenas.
+ *         Los operadores + y += están sobrecargados, aplicados a las cadenas
+ *         actúan como una concatenación de cadenas.
  * 
  *         El operador módulo % calcula el resto de la division de dos números.
  * 
@@ -54,8 +54,10 @@ public class Leccion_2_02 {
 		byte b1 = 1, b2 = 2;
 		// byte b3 = b1 * b2; // NO COMPILA
 		int b3 = b1 * b2;
-		// float f1 = 1.0; // NO COMPILA 1.0 ES UN double
+		// float f1 = 1.0; // NO COMPILA, 1.0 ES UN double
+		float f1 = 1; // SI COMPILA, 1 pasa de int a float
 		float f2 = 1.0F, f3 = 1.0f;
+		
 	}
 
 }
