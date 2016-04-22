@@ -62,9 +62,11 @@ public class Leccion_2_05_C {
 		 * implementa java.lang.Iterable, lo que incluye la mayor parte de las
 		 * colecciones.
 		 */
-		for (String s : args) {
+		String[] v = new String[] {"Oracle", "Certified", "Associate"};
+		for (String s : v) {
 			System.out.println(s);
 		}
+		
 	}
 
 }
