@@ -10,6 +10,9 @@ package es.smartcoding.oca.seccion3;
  * 
  *         En esta lección aprenderemos a crear y utilizar objetos de tipo
  *         StringBuilder y las ventajas que aporta respecto de la clase String.
+ * 
+ *         La diferencia más importante es que StringBuilder es mutable, o dicho
+ *         de otra manera, no es inmutable.
  *
  */
 public class Leccion_3_02 {
@@ -18,8 +21,11 @@ public class Leccion_3_02 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String alpha = "";
+		for (char current = 'a'; current <= 'z'; current++) {
+			alpha += current;
+		}
+		System.out.println(alpha);
 
 	}
-
 }
