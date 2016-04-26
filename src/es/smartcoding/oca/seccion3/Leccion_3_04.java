@@ -127,6 +127,9 @@ public class Leccion_3_04 {
 			}
 			System.out.println();
 		}
+		/*
+		 * Alternativamente puede recorrerse con dos bucles for-Each.
+		 */
 		System.out.println("********");
 		for(int[] i: matriz2) {
 			for(int j: i) {
