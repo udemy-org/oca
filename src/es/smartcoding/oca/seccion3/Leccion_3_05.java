@@ -174,6 +174,41 @@ public class Leccion_3_05 {
 		 * 
 		 * char -> Character. new Character('a')
 		 */
+		/*
+		 * Además, cada clase envolvente proporciona un método para pasar de
+		 * String a su tipo primitivo correspondiente:
+		 * 
+		 * Boolean.parseBoolean("true");
+		 * 
+		 * Byte.parseByte("1");
+		 * 
+		 * Short.parseShort("1");
+		 * 
+		 * Integer.parseInt("1");
+		 * 
+		 * Long.parseLong("1");
+		 * 
+		 * Float.parseFloat("1");
+		 * 
+		 * Double.parseDouble("1");
+		 * 
+		 * La família de métodos valueOf se utilizan para pasar de String a su
+		 * clase envolvente correspondiente:
+		 * 
+		 * Boolean.valueOf("TRUE");
+		 * 
+		 * Byte.valueOf("2");
+		 * 
+		 * Short.valueOf("2");
+		 * 
+		 * Integer.valueOf("2");
+		 * 
+		 * Long.valueOf("2");
+		 * 
+		 * Float.valueOf("2.2");
+		 * 
+		 * Double.valueOf("2.2");
+		 */
 		List<Integer> list7 = new ArrayList<>();
 		list7.add(new Integer(1));
 		list7.add(new Integer(2));
