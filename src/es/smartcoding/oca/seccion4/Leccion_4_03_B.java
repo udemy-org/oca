@@ -3,6 +3,21 @@
  */
 package es.smartcoding.oca.seccion4;
 
+import static java.util.Arrays.asList;
+
+/*
+ * No se pueden importar dos clases con el mismo nombre.
+ */
+import java.util.List;
+// import java.awt.List;
+
+import static java.util.Arrays.asList;
+import static java.util.Arrays.*;
+
+/*
+ * Aunque usando comodines es posible importar implícitamente un método más de una vez.
+ */
+
 /**
  * @author pep
  * 
@@ -130,6 +145,16 @@ public class Leccion_4_03_B {
 		 * de instancia.
 		 */
 		DemoStaticInit dsi = new DemoStaticInit();
+		/*
+		 * Finalmente, así como los imports normales importan clases, los
+		 * imports estáticos importan miembros estáticos de clases concretas.
+		 */
+		List<String> list1 = asList("alfa", "bravo");
+		/*
+		 * Fíjate bien que el import estático importa el método asList y no la
+		 * clase Arrays.
+		 */
+		// List<String> list2 = Arrays.asList("alfa", "bravo"); // No compila
 	}
 
 }
