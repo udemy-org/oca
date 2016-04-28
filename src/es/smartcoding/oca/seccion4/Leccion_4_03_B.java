@@ -59,6 +59,43 @@ class DemoStatic {
 	}
 }
 
+class DemoStaticInit {
+	/*
+	 * Las constantes estáticas o bien se inicializan cuando se declaran o bien
+	 * en un bloque estático (sólo una vez), de otra forma se genera un error de
+	 * compilación.
+	 */
+	private static final int MAX_ELEM;
+	private static final int CONST1 = 0;
+	// private static final int CONST2; // No compila
+	/*
+	 * Los bloques de inicialización estáticos se ejecutan cuando la clase se
+	 * usa por primera vez.
+	 * 
+	 * Cuando se crea una instancia de esta clase, primero se ejecuta el código
+	 * de los bloques estáticos (en orden) y después el código de los bloques de
+	 * instancia.
+	 * 
+	 * De todas formas, se recomienda no utilizar bloques de inicialización de
+	 * instancia y trasladar ese código al constructor.
+	 */
+	static {
+		System.out.println("En bloque estático");
+		int max_filas = 3;
+		int max_cols = 5;
+		MAX_ELEM = max_filas * max_cols;
+	}
+
+	{
+		System.out.println("En bloque de instancia");
+	}
+
+	public static void m1() {
+		System.out.println(MAX_ELEM);
+	}
+
+}
+
 public class Leccion_4_03_B {
 
 	/**
@@ -80,6 +117,19 @@ public class Leccion_4_03_B {
 		 * Totalmente válido para invocar un método estático.
 		 */
 		ds1.m1();
+		/*
+		 * Como invocamos un método estático, sólamente el bloque estático se
+		 * ejecuta, pero sólo una vez.
+		 */
+		DemoStaticInit.m1();
+		DemoStaticInit.m1();
+		/*
+		 * En este caso creamos una instancia de la clase DemoStaticInit, por lo
+		 * tanto, si no se ha ejecutado ya, se invoca el código de
+		 * inicialización estático primero y después el código de inicialización
+		 * de instancia.
+		 */
+		DemoStaticInit dsi = new DemoStaticInit();
 	}
 
 }
