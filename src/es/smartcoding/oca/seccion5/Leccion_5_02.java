@@ -10,15 +10,21 @@ package es.smartcoding.oca.seccion5;
  * 
  *         En esta lección hablaremos sobre las características de las clases
  *         abstractas.
+ *         
+ *         Las clases abstractas
  *
  */
+abstract class Figura {
+	
+	public abstract double area();
+}
+
 public class Leccion_5_02 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
