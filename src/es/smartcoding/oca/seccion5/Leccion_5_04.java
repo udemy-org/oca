@@ -14,27 +14,31 @@ package es.smartcoding.oca.seccion5;
  *         Java soporta el polimorfismo, la propiedad que tienen los objetos de
  *         tomar diferentes formas.
  * 
- *         Para ser más preciso, una referencia Java puede asignarse a un objeto
- *         del mismo tipo, a un objeto de la superclase, o a un objeto de una
- *         interfaz que implemente ya sea directa o indirectamente.
+ *         Para ser más preciso, una objeto Java puede asignarse a una
+ *         referencia del mismo tipo, a una referencia de la superclase, o a una
+ *         referencia de una interfaz que la implemente ya sea directa o
+ *         indirectamente.
  * 
- *
  */
 
 interface I1 {
-
+	void f();
 }
 
 interface I2 extends I1 {
-
+	void g();
 }
 
-class ClaseBase implements I2 {
-
+abstract class ClaseBase implements I2 {
+	public void g() {
+		System.out.println("en g()");
+	}
 }
 
-class ClaseConcreta extends ClaseBase {
-
+class MiClaseConcreta extends ClaseBase {
+	public void f() {
+		System.out.println("en f()");
+	}
 }
 
 public class Leccion_5_04 {
@@ -44,20 +48,30 @@ public class Leccion_5_04 {
 	 */
 	public static void main(String[] args) {
 		/*
+		 * En este fragmento de código se crea un único objeto de tipo
+		 * ClaseConcreta que se asigna a diferentes referencias
+		 */
+		/*
 		 * El objeto cc es de tipo ClaseConcreta y hace referencia a un objeto
 		 * del mismo tipo.
 		 */
-		ClaseConcreta cc = new ClaseConcreta();
+		MiClaseConcreta cc = new MiClaseConcreta();
+		cc.f();
+		cc.g();
 		/*
 		 * El objeto cb es de tipo ClaseBase y hace referencia a un objeto de
 		 * tipo ClaseConcreta, una subclase de ClaseBase.
 		 */
-		ClaseBase cb = new ClaseConcreta();
+		ClaseBase cb = cc;
+		cb.f();
+		cb.g();
 		/*
 		 * El objeto i1 es de tipo I1, la clase ClaseConcreta hereda de
 		 * ClaseBase que implementa I1 de forma indirecta a través de I2.
 		 */
-		I1 i1 = new ClaseConcreta();
+		I1 i1 = cc;
+		i1.f();
+		((I2)i1).g();
 	}
 
 }
