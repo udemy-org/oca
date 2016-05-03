@@ -28,21 +28,38 @@ package es.smartcoding.oca.seccion5;
 
 interface I1 {
 	void f();
+
+	void print(I1 i);
 }
 
 interface I2 extends I1 {
 	void g();
 }
 
-abstract class ClaseBase implements I2 {
+class ClaseBase implements I2 {
 	public void g() {
-		System.out.println("en g()");
+		System.out.println("en CodeBase.g()");
 	}
+
+	@Override
+	public void f() {
+		System.out.println("en CodeBase.f()");
+	}
+
+	@Override
+	public void print(I1 i) {
+		System.out.println(i);
+	}
+
 }
 
 class MiClaseConcreta extends ClaseBase {
+	public void g() {
+		System.out.println("en MiClaseConcreta.g()");
+	}
+
 	public void f() {
-		System.out.println("en f()");
+		System.out.println("en MiClaseConcreta f()");
 	}
 }
 
@@ -110,19 +127,48 @@ public class Leccion_5_04 {
 		 * 
 		 * 3. El compilador no permitirá conversiones imposibles.
 		 * 
-		 * 4. Incluso si el código compila, si el objeto a convertir no es de
-		 * hecho una instancia de la otra clase, en tiempo de ejecució lanzará
-		 * una excepción de tipo java.lang.ClassCastException.
+		 * 4. Incluso cuando el código compila, si el objeto a convertir no es
+		 * de hecho una instancia de la otra clase, se lanzará una excepción de
+		 * tipo java.lang.ClassCastException en tiempo de ejecució.
 		 */
 		/*
 		 * Esta conversión compila porque Object y String forman parte de la
 		 * jerarquía pero lanza una excepción java.lang.ClassCastException en
 		 * tiempo de ejecución.
 		 */
-		String strObject = (String) object;
+		// String strObject = (String) object;
 		Number number = new Integer(1);
-		// String strNumber = (String) number; // No compila, conversión
-		// imposible
+		/*
+		 * No compila, las clases Number y String no están relacionadas.
+		 */
+		// String strNumber = (String) number;
+
+		/*
+		 * Aunque no forma parte del examen, el operador instanceof puede usarse
+		 * para comprobar un cast en tiempo de ejecución.
+		 */
+
+		/*
+		 * Pero donde el polimorfismo es verdaderamente fuerte es el soporte de
+		 * métodos virtuales (todos aquellos métodos que no son finales,
+		 * estáticos ni privados) como g(), donde la implementación a ejecutar
+		 * se decide en tiempo de ejecución, siempre en función del objeto y no
+		 * del tipo de la referencia.
+		 */
+		ClaseBase claseBase = new MiClaseConcreta();
+		claseBase.g();
+		/*
+		 * Un resultado interesante del polimorfismo son los parámetros
+		 * polimorficos de un método. En otras palabras, se trata de que los
+		 * parámetros de un método no sean clases concretas sino interfaces o
+		 * superclases, lo que amplia el rango de argumentos formales.
+		 * 
+		 * A modo de ejemplo es mas recomendable definir un método como f(List)
+		 * que como f(ArrayList) porque List es una interfaz y ArrayList es una
+		 * clase concreta.
+		 */
+		claseBase.print(claseBase);
+
 	}
 
 }
