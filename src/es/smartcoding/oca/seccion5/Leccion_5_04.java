@@ -14,10 +14,9 @@ package es.smartcoding.oca.seccion5;
  *         Java soporta el polimorfismo, la propiedad que tienen los objetos de
  *         tomar diferentes formas.
  * 
- *         Para ser más preciso, un objeto Java puede asignarse a una referencia
- *         del mismo tipo que el objeto, a una referencia a la superclase del
- *         objeto, o una referencia a una interfaz que implemente el objeto,
- *         bien directa o indirectamente.
+ *         Para ser más preciso, una referencia Java puede asignarse a un objeto
+ *         del mismo tipo, a un objeto de la superclase, o a un objeto de una
+ *         interfaz que implemente ya sea directa o indirectamente.
  * 
  *
  */
@@ -45,20 +44,20 @@ public class Leccion_5_04 {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * El objeto b1 es de tipo B y hace referencia a un objeto del mismo
-		 * tipo.
+		 * El objeto cc es de tipo ClaseConcreta y hace referencia a un objeto
+		 * del mismo tipo.
 		 */
-		ClaseConcreta b1 = new ClaseConcreta();
+		ClaseConcreta cc = new ClaseConcreta();
 		/*
-		 * El objeto b2 es de tipo A y hace referencia a un objeto de tipo B,
-		 * una subclase de A.
+		 * El objeto cb es de tipo ClaseBase y hace referencia a un objeto de
+		 * tipo ClaseConcreta, una subclase de ClaseBase.
 		 */
-		ClaseBase b2 = new ClaseConcreta();
+		ClaseBase cb = new ClaseConcreta();
 		/*
-		 * El objeto b3 es de tipo K, la clase B implementa K de forma
-		 * indirecta.
+		 * El objeto i1 es de tipo I1, la clase ClaseConcreta hereda de
+		 * ClaseBase que implementa I1 de forma indirecta a través de I2.
 		 */
-		I1 b3 = new ClaseConcreta();
+		I1 i1 = new ClaseConcreta();
 	}
 
 }
