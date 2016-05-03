@@ -164,15 +164,15 @@ public class Leccion_5_01_B {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Subclase.s();
+		ClaseConcreta.s();
 		/*
 		 * Esto es un ejemplo de polimorfismo, que veremos más adelante, El
 		 * objeto base es de tipo Base pero hace referencia a una instancia de
 		 * Subclase. A pesar de eso, cuando accedemos a la variable var definida
 		 * en ambas clases se muestra el valor definido en la clase Base.
 		 */
-		Base base = new Subclase();
-		Subclase subclase = new Subclase();
+		Base base = new ClaseConcreta();
+		ClaseConcreta subclase = new ClaseConcreta();
 		// 1
 		System.out.println(base.var);
 		// 2

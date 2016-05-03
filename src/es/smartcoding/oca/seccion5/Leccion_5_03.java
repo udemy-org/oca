@@ -109,7 +109,7 @@ class Turismo extends Utilitario {
 
 }
 
-interface I {
+interface MiInterfaz1 {
 
 	public static void g() {
 	}
@@ -119,7 +119,7 @@ interface I {
 	}
 }
 
-interface J {
+interface MiInterfaz2 {
 
 	public static void g() {
 	}
@@ -129,10 +129,10 @@ interface J {
 	}
 }
 
-class IJ implements I, J {
+class MiClase implements MiInterfaz1, MiInterfaz2 {
 	public void f() {
-		I.g();
-		J.g();
+		MiInterfaz1.g();
+		MiInterfaz2.g();
 		// g(); // No compila
 	}
 }
