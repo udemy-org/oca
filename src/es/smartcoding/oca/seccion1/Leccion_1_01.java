@@ -3,31 +3,35 @@
  */
 package es.smartcoding.oca.seccion1;
 
+
+
 /**
  * @author pep
  * 
  *         La estructura de una clase Java
  * 
- *         En esta lección veremos cuál es la estructura de una clase, los
- *         componentes que la forman.
+ *         En general la estructura de una clase esta compuesta por un nombre de paquete, cero o más órdenes import, el nombre de la clase, sus propiedades y métodos.
  *
  */
 public class Leccion_1_01 {
+
+	private String nombre;
+
+	/*
+	 * Método print
+	 */
+	public void print() {
+		System.out.println("Bienvenido a OCA");
+	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Leccion_1_01 leccion_1_01 = new Leccion_1_01();
+		leccion_1_01.print();
 
 	}
 
-}
-
-/*
- * La mayoría de las clases se escriben en su propio fichero con extensión Java.
- * Pero es totalmente válido tener más de una clase (no pública) en un mismo
- * fichero.
- */
-class Vehiculo {
 }
