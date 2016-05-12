@@ -8,7 +8,7 @@ package es.smartcoding.oca.seccion4;
  * 
  *         Trabajando con argumentos variables (varags)
  * 
- *         En esta lección veremos cómo trabajar con métodos que aceptan un
+ *         Los métodos
  *         número variable de parámetros, SIEMPRE como último parámetro.
  *
  */
