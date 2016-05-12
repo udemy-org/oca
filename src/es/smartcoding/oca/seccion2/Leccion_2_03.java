@@ -8,15 +8,13 @@ package es.smartcoding.oca.seccion2;
  * 
  *         Los operadores unarios
  * 
- *         En esta lección abordaremos el tema de los operadores unarios, como
- *         el incremento, decremento o negación lógica entre otros.
+ *         Los operadores de incremento (++) y decremento (--) pueden aplicarse en preorden (a la izquierda del operando) o en postorden (a la derecha del operando).
+ *         
+ *		   Tienes que tener en cuenta que el examen va a poner a prueba tus conocimientos sobre esta materia.                  
  *
  */
 public class Leccion_2_03 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * ! es la negación logica

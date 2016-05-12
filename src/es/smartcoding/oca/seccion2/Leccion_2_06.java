@@ -8,8 +8,7 @@ package es.smartcoding.oca.seccion2;
  * 
  *         El control de flujo avanzado
  * 
- *         En esta lección estudiaremos aspectos avanzados de algunas
- *         estructuras de Java como la orden break, continue, etc.
+ *         El examen questionará tus conocimientos sobre la orden break y continue con etiquetas en bucles anidados.
  *
  */
 public class Leccion_2_06 {
@@ -22,10 +21,10 @@ public class Leccion_2_06 {
 	 * intencionadamente he escrito un bucle clásico dentro de un bucle
 	 * for-each.
 	 * 
-	 * Estudiaremos las matrices más adelante, pero en Java una Matriz es una
-	 * array de arrays. El bucle más externo recorre en turno los arrays { 5, 2,
-	 * 1, 3 }, { 3, 9, 8, 9 }, { 5, 7, 4, 7 }. Y el bucle interno recorre cada
-	 * elemento de cada array: 5, 2, 1, 3, 3, 9, 8, 9, etc.
+	 * En Java una Matriz es una array de arrays. El bucle más externo recorre
+	 * en turno los arrays { 5, 2, 1, 3 }, { 3, 9, 8, 9 }, { 5, 7, 4, 7 }. Y el
+	 * bucle interno recorre cada elemento de cada array: 5, 2, 1, 3 después 3,
+	 * 9, 8, 9, etc.
 	 */
 	public static void main(String[] args) {
 		int[][] myComplexArray = { { 5, 2, 1, 3 }, { 3, 9, 8, 9 },
@@ -44,7 +43,18 @@ public class Leccion_2_06 {
 		 * Tanto break como continue son una rotura de flujo, un salto, y
 		 * admiten una etiqueta opcional que si no la llevan se entiende que se
 		 * refire al bucle actual.
+		 * 
+		 * En un bucle for continue primero ejecuta el bloque de incremento de la variable y
+		 * después se verifica la condición de final de bucle.
 		 */
+		System.out.println("Continue + for");
+		int[] v1 = { 1, 3, 5, 6, 9 };
+		for (int i = 0; i < v1.length; i++) {
+			if (v1[i] % 2 == 0) {
+				continue;
+			}
+			System.out.println(v1[i]);
+		}
 
 		etiqueta_01: for (int i = 0; i < 10; i++) {
 			etiqueta_02: for (int j = 0; j < 10; j++) {

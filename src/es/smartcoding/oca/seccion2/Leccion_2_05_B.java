@@ -6,16 +6,15 @@ package es.smartcoding.oca.seccion2;
 /**
  * @author pep
  * 
+ * 		   Las estructuras de control de Java
+ * 
  *         Un bucle (loop) es una estructura de control de repetición.
  * 
- *         Las llaves son opcionales.
+ *         Las llaves son opcionales cuando el cuerpo esta formado por una única instrucción.
  *
  */
 public class Leccion_2_05_B {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		int i = 0;

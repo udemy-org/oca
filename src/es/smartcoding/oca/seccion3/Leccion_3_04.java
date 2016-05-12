@@ -10,21 +10,15 @@ import java.util.Arrays;
  * 
  *         Los arrays de Java
  * 
- *         En esta lección trataremos el tema de los arrays. Colecciones
- *         cerradas de elementos que se guardan en la memoria Heap.
- * 
  *         Tanto la clase String como la clase StringBuilder están implementadas
  *         con una array de caracteres.
  * 
- *         La StringBuilder sustituye su array de caracteres por otro cuando se
+ *         La clase StringBuilder sustituye su array de caracteres por otro cuando se
  *         queda sin espacio.
  *
  */
 public class Leccion_3_04 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * La manera más sencilla de crear un array es esta, donde cada elemento
@@ -105,7 +99,7 @@ public class Leccion_3_04 {
 		System.out.println(pos);
 		/*
 		 * Java interpreta los arrays multidimensionales como arrays de arrays.
-		 * Las matrices o arrays bidimensionales pueden ser simétricas de mxn
+		 * Las matrices o arrays bidimensionales pueden ser simétricas de m x n
 		 * elementos, o asimétricas donde cada fila puede tener un número
 		 * diferente de columnas.
 		 */

@@ -16,9 +16,6 @@ package es.smartcoding.oca.seccion3;
  */
 public class Leccion_3_03 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		StringBuilder one = new StringBuilder("abc");
 		StringBuilder two = new StringBuilder("abc");
@@ -28,7 +25,7 @@ public class Leccion_3_03 {
 		// true
 		System.out.println(one == three);
 		/*
-		 * La clase StringBuilder NO implementa el método equals por lo tanto se
+		 * La clase StringBuilder NO implementa el método equals, sino que lo hereda de Object con la implementación por defecto, por lo tanto se
 		 * comporta como '=='.
 		 * 
 		 * La clase String en cambio sí que implementa el método equals (En el

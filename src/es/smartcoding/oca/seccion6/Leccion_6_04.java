@@ -18,7 +18,7 @@ class MyException extends Exception {
 }
 
 class Maquina {
-	public void overClocking(double velocidad) throws Exception {
+	public void overClocking(double velocidad) throws Exception, IllegalAccessException {
 
 	}
 }

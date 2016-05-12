@@ -8,22 +8,16 @@ package es.smartcoding.oca.seccion3;
  * 
  *         La clase StringBuilder
  * 
- *         En esta lección aprenderemos a crear y utilizar objetos de tipo
- *         StringBuilder y las ventajas que aporta respecto de la clase String.
- * 
- *         La diferencia más importante es que StringBuilder es mutable, o dicho
+ *         La diferencia más importante con respecto String es que StringBuilder es mutable, o dicho
  *         de otra manera, no es inmutable.
  * 
  *         La clase StringBuilder se añadió a Java en la versión 5.
- *         Anteriormente se usaba StringBuffer que es algo más lenta porque es
+ *         Anteriormente se usaba StringBuffer que es similar pero más lenta porque es
  *         multithread.
  *
  */
 public class Leccion_3_02 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * Dada la naturaleza inmutable de las cadenas en Java, en cada
@@ -122,7 +116,7 @@ public class Leccion_3_02 {
 		 * El método delete es el opuesto, elimina caracteres de una secuencia y
 		 * retorna una referencia al StringBuilder actual.
 		 * 
-		 * El métoodo deleteCharAt es conveniente cuando sólo queremos eliminar
+		 * El método deleteCharAt es conveniente cuando sólo queremos eliminar
 		 * un caracter.
 		 */
 		sb6.delete(7, 21);

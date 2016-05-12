@@ -9,16 +9,12 @@ import java.io.File;
  * @author pep
  * 
  *         Operadores binarios adicionales
+ *         
+ *         Toma buena nota de los operadores que forman parte del examen y de los que no, aunque es conveniente que conozcas ambos.
  * 
- *         En esta lección veremos otros operadores como los operadores
- *         relacionales, el operador de asignación etc.
- *
  */
 public class Leccion_2_04 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		short x = 2;
 		short y = 3;
@@ -31,15 +27,20 @@ public class Leccion_2_04 {
 		 * Operadores de asignación compuestos.
 		 */
 		int a = 2, b = 3;
-		// La expresión a = a * b; puede escribirse como
+		// La expresión a = a * b; puede escribirse como asignación compuesta
 		a *= b;
 		//
 		long m = 10;
 		int n = 5;
 		// n = m * n; // DOES NOT COMPILE
-		n *= m; // Cast implícito
+		/*
+		 * Cast implícito E1 op= E2 es lo mismo que E1 = (T) ((E1) op (E2))
+		 * donde T es de tipo E1. Puede haber pérdida de precesión
+		 */
+		n *= m;
 		System.out.println(n);
-		// El resultado de una asignación es una expresión en sí mismo.
+		// El resultado de una asignación es una expresión en sí mismo. Es es
+		// totalmente válido.
 		int p = 1;
 		int q = (p = 2);
 		System.out.println(p);
@@ -74,8 +75,9 @@ public class Leccion_2_04 {
 		boolean bool4 = true || (d * 3 + e - 1 > e / 0);
 		System.out.println(bool4);
 		/*
-		 * Es muy útil en casos como este, cuando queremos asegurarnos de que
-		 * una instancia no es nula antes de invocar un método.
+		 * Los operadores lógicos de circuito lógico son muy útiles en casos
+		 * como este, cuando queremos asegurarnos de que una instancia no es
+		 * nula antes de invocar un método.
 		 */
 		String str = null;
 		if (str != null && str.length() > 0) {

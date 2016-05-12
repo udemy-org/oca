@@ -10,27 +10,28 @@ package es.smartcoding.oca.seccion2;
  * 
  *         En esta lección revisaremos los condicionales y bucles básicamente.
  * 
- *         Una instrucción Java es una unidad de ejecución completa, terminada
- *         en ;
+ *         Una instrucción Java es una unidad de ejecución completa, terminada en ;
  * 
- *         Un bloque de código es una o más instrucciones Java delimitadas por
- *         {}
+ *         Un bloque de código es una o más instrucciones Java delimitadas por llaves {}
  * 
  *
  *
  */
 public class Leccion_2_05_A {
 
+	/*
+	 * Las expresiones case de una estructura switch deben ser valores constantes conocidos en tiempo de ejecución.
+	 */
 	private static void checkCase(int a, final int b) {
-		// switch(a) {
-		// /*
-		// * b no es una constante conocida en tiempo de compilación
-		// */
-		// case b: // NO COMPILA
-		// System.out.println("En b");
-		// break;
-		//
-		// }
+		 switch(a) {
+		 /*
+		 * b no es una constante conocida en tiempo de compilación
+		 */
+//		 case b: // NO COMPILA
+//		 System.out.println("En b");
+//		 break;
+		
+		 }
 	}
 
 	/**
@@ -54,7 +55,7 @@ public class Leccion_2_05_A {
 		int l = 10;
 		if (l < 5)
 			l++;
-		System.out.println(l);
+			System.out.println(l);
 		/*
 		 * Con la orden if-then-else debemos tener especial cuidado.
 		 */
@@ -76,8 +77,7 @@ public class Leccion_2_05_A {
 		/*
 		 * El orden es importante.
 		 * 
-		 * El bloque 2 nunca se ejecutará, porque un número menor de 10 es menor
-		 * de 20 por definición.
+		 * El bloque 2 nunca se ejecutará, porque un número menor de 10 es menor de 20 por definición.
 		 */
 		if (m < 20) {
 			// bloque 1
@@ -98,7 +98,7 @@ public class Leccion_2_05_A {
 		 * Compara el bloque anterior con esta expresión que hace exactamente lo
 		 * mismo. Mucho más compacta. Los parentesis son opcionales. Sólo una
 		 * expresión de las dos será evaluada en tiempo de ejecución, además de
-		 * la condición.
+		 * la condición. El interrogante precede la expresion a asignar cuando la condición sea true.
 		 */
 		x = (y > 5) ? (2 * y) : (3 * y);
 		/*
@@ -113,19 +113,19 @@ public class Leccion_2_05_A {
 		 * int). En Java 5.0 cuando se introdujeron los enumerados también se
 		 * añadió soporte a switch para enumerados. En Java 7 se enriqueció con
 		 * cadenas (String) y finalmente se completó con las clases envolventes
-		 * de los tipos primitivos: Byte, Short, Character o Integer. Importante
+		 * de los tipos primitivos: Byte, Short, Character o Integer. Es importante
 		 * recordar que no admite ni long ni boolean.
 		 * 
 		 * La orden case solamente admite literales, constantes enumeradas, o
 		 * variables constantes finales del mismo tipo que la expresión switch y
 		 * no necesitan estar ordenado, asímismo la orden default no tienen
-		 * porqué sera la última. Además en una orden case no puede haber
+		 * porqué ser la última. Además en una orden case no puede haber
 		 * repetidos.
 		 * 
 		 * Por último, la orden break rompe la secuencia, lo que quiere decir
 		 * que si olvidas una puedes obtener resultados inesperados.
 		 * 
-		 * Los editores de examenes juegan mucho con este último aspecto.
+		 * Estas advertido de que los editores de examenes juegan mucho con este último aspecto.
 		 */
 		int nota = 9;
 		int tres = 3;

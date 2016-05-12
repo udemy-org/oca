@@ -22,24 +22,21 @@ import java.util.GregorianCalendar;
  * 
  *         Trabajando con fechas y horas
  * 
- *         En esta lección introduciremos nuevas clases con las que Java 8 ha
- *         renovado el trabajo con fechas, horas, períodos, y zonas horarias:
- *         LocalDate, LocalTime, LocalDateTime entre otras.
+ *         Java 8 ha renovado completamente el trabajo con fechas, horas, períodos, y zonas
+ *         horarias: con las clases LocalDate, LocalTime, LocalDateTime entre
+ *         otras.
  * 
- *         En el examen no tienes que preocuparte sobre los diferentes formatos
- *         de las fechas (Unos paises utilizan el formato 'dd/MM/yyyy' como
+ *         En el examen suele quedar claro el formato de las fechas
+ *         (Unos paises utilizan el formato 'dd/MM/yyyy' como
  *         España, otros el formato 'yyyy-MM-dd' como los Estados Unidos de
  *         Norte América), además Java usa un formato de 24 horas.
  *
  */
 public class Leccion_3_06 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
-		 * La clase java.time.LocalDate contiene sólo una fecha, ISO-8601 como
+		 * La clase java.time.LocalDate contiene sólo una fecha, con formato ISO-8601 como
 		 * 2010-08-31
 		 * 
 		 * La clase java.time.LocalTime contiene sólo una hora.

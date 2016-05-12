@@ -6,19 +6,18 @@ package es.smartcoding.oca.seccion2;
 /**
  * @author pep
  * 
+ *         Las estructuras de control de Java
+ * 
  *         Desde la versión 5.0 de Java hay dos tipos de bucles for. El for
- *         básico y el for mejorado.
+ *         básico y el for mejorado también llamado for-each.
  *
  */
 public class Leccion_2_05_C {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
-		 * Tiene tres partes todas opcionales. De izquierda a derecha, la
-		 * primera es la de inicialización, la segunda es la condición de final
+		 * Un bucle for tiene tres partes todas opcionales. De izquierda a derecha, la
+		 * primera es la de inicialización, la segunda es la condición de final de bucle
 		 * y la tercera la actualización.
 		 */
 		/*
@@ -55,12 +54,12 @@ public class Leccion_2_05_C {
 
 		/*
 		 * El bucle for mejorado, o bucle for-each introducido en Java 5.0 se
-		 * compone de dos partes una inicialización y un objeto sobre el que
+		 * compone de dos partes una declaración de variable y un objeto sobre el que
 		 * iterar.
 		 * 
-		 * El objeto sobre el que iteramos debe ser un array a un objeto que
+		 * El objeto sobre el que iteramos debe ser un array o un objeto que
 		 * implementa java.lang.Iterable, lo que incluye la mayor parte de las
-		 * colecciones.
+		 * colecciones, que contenga elementos del mismo tipo que la variable declarada en el bucle.
 		 */
 		String[] v = new String[] {"Oracle", "Certified", "Associate"};
 		for (String s : v) {
