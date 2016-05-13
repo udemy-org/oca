@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Tipos de excepciones comunes
  * 
- *         En esta lección estudiaremos cuáles son las excepciones más comunes
- *         que debes conocer durante el examen oficial.
- * 
  *         El examen OCA questionará tu conocimiento sobre tres tipos de
  *         excepciones: excepciones no comprobadas o excepciones en tiempo de
  *         ejecución, excepciones comprobadas y errores.

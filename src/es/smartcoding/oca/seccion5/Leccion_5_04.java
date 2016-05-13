@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion5;
  * 
  *         El polimorfismo
  * 
- *         En esta lección estudiaremos uno de los pilares de la Programación
- *         Orientada a Objetos: el polimorfismo.
- * 
  *         Java soporta el polimorfismo, la propiedad que tienen los objetos de
  *         tomar diferentes formas.
  * 

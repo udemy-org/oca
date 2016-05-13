@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion5;
  * 
  *         La implementación de interfaces
  * 
- *         En esta lección abordaremos el tema de las interfaces, qué son y cómo
- *         implementarlas.
- * 
  *         Aunque Java no permite la herencia múltiple, sí que permite a una
  *         clase implementar cualquier número de interfaces.
  * 

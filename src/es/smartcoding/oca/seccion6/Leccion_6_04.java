@@ -8,9 +8,8 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Llamada a métodos que lanzan excepciones
  * 
- *         En esta lección revisaremos cómo llamar a métodos que lanzan
- *         excepciones y como reescribir una método que lanza una o varias
- *         excepciones.
+ *         Las excepciones son nuestras amigas. Nos ayudan a depurar nuestro
+ *         código.
  * 
  */
 
@@ -18,7 +17,8 @@ class MyException extends Exception {
 }
 
 class Maquina {
-	public void overClocking(double velocidad) throws Exception, IllegalAccessException {
+	public void overClocking(double velocidad) throws Exception,
+			IllegalAccessException {
 
 	}
 }

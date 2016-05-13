@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion5;
  * 
  *         La herencia
  * 
- *         En esta lección estudiaremos uno de los pilares de la Programación
- *         Orientada a Objetos: la herencia.
- * 
  *         Cuando creamos una clase en Java implícitamente estamos heredando de
  *         la clase java.lang.Object. Eso quiere decir que sus miembros publicos
  *         y protected como los métodos toString, equals, etc., están presentes

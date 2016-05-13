@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion5;
  * 
  *         Las clases abstractas
  * 
- *         En esta lección hablaremos sobre las características de las clases
- *         abstractas.
- * 
  *         Las clases abstractas son clases incompletas, pensadas para ser
  *         extendidas y por lo tanto completadas mediante clases concretas.
  * 

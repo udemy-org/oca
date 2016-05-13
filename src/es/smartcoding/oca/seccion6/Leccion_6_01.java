@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Qué son las excepciones?
  * 
- *         En esta lección conoceremos el concepto de excepción y los diferentes
- *         tipos.
- * 
  *         Un programa puede fallas por numeros razones, algunas que podemos
  *         solucionar nosotros como programadores y otras que se escapan a
  *         nuestro control.
