@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion4;
  * 
  *         Pasando datos entre métodos
  * 
- *         En esta lección aprenderemos la diferencia entre paso de parámetros
- *         por valor y por referencia.
- * 
  *         Java es un lenguaje de programación de tipo 'paso-por-valor' lo que
  *         quiere decir que se envia una copia de una variable como argumento
  *         durante la invocación de un método.
@@ -42,6 +39,8 @@ public class Leccion_4_04 {
 	 */
 	static void m3(StringBuilder sb) {
 		sb.reverse();
+		// Pero si asignamos otra instancia a sb no tiene efecto!!!
+		sb = new StringBuilder("XY");
 	}
 
 	/*

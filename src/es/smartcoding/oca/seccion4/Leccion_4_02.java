@@ -8,8 +8,8 @@ package es.smartcoding.oca.seccion4;
  * 
  *         Trabajando con argumentos variables (varags)
  * 
- *         Los métodos
- *         número variable de parámetros, SIEMPRE como último parámetro.
+ *         La regla de oro es que los varargs o argumentos variables deben ser
+ *         siempre el último parámetro del método
  *
  */
 public class Leccion_4_02 {
@@ -21,10 +21,7 @@ public class Leccion_4_02 {
 		System.out.println(a.length);
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		/*
 		 * Un método con Varargs se puede invocar mediante una secuencia
 		 * separada por comas de argumentos o mediante un array.

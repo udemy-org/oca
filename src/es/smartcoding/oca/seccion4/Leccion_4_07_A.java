@@ -8,30 +8,29 @@ package es.smartcoding.oca.seccion4;
  * 
  *         La encapsulación de datos
  * 
- *         En esta lección trataremos uno de los pilares de la Programación
- *         Orientada a Objetos, la encapsulación.
- * 
  *         La encapsulación previene que se pueda manipular las propiedades de
  *         un objeto a nuestro antojo.
  * 
  *         La solución pasa por declarar las propiedades como private y definir
- *         metodos accesores (getters y setters) según convenga. Si queremos que
- *         una propiedad sea de sólo lectura, definiremos sólamente su método
- *         getter y si queremos que sea de sólo escritura definiremos el método
- *         setter. De la misma manera si queremos que una propiedad sea de
- *         lectura y escritura definiremos sus métodos getter y setter.
+ *         metodos accesores public (getters y setters) según convenga. Si
+ *         queremos que una propiedad sea de sólo lectura, definiremos sólamente
+ *         su método getter y si queremos que sea de sólo escritura definiremos
+ *         el método setter. De la misma manera si queremos que una propiedad
+ *         sea de lectura y escritura definiremos ambos métodos getter y setter.
  * 
  *         Java define los JavaBeans como clases con una serie de
  *         características:
+ *         
+ *         1. Tienen constructor por defecto.
  * 
- *         1. Las propiedades son privadas.
+ *         2. Las propiedades son privadas.
  *
- *         2. Los métodos getter empiezan con 'get' excepto cuando se trata de
+ *         3. Los métodos getter empiezan con 'get' excepto cuando se trata de
  *         propiedades booleanas que empiezan por 'is'.
  * 
- *         3. Los métodos setter empieza con 'set'.
+ *         4. Los métodos setter empieza con 'set'.
  * 
- *         4. Después del prefijo get, is o set le sigue el nombre de la
+ *         5. Después del prefijo get, is o set le sigue el nombre de la
  *         propiedad con la primera letra en mayusculas.
  */
 

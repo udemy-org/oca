@@ -8,13 +8,24 @@ package es.smartcoding.oca.seccion4;
  * 
  *         La sobrecarga de métodos
  * 
- *         En esta lección abordaremos el tema de la sobrecarga de métodos:
- *         métodos con el mismo nombre y una lista de parámetros (signatura)
- *         diferente.
- * 
  *         Ya hemos utilizado métodos sobrecargados sin darnos cuenta. Por
  *         ejemplo System.out.println() es un método sobrecargado porque admite
  *         virtualmente cualquier tipo de argumento.
+ * 
+ *         La manera cono Java resulve el método a invocar cuando está
+ *         sobrecargado es mediante una reglas muy sencillas. Por ejemplo, la
+ *         invocación metodo1(1, 1)
+ * 
+ * 
+ *         1. Busca una correspondencia exacta: metodo1(int, int)
+ * 
+ *         2. Busca una correspondencia con un tipo primitivo mayor:
+ *         metodo1(int, long), metodo1(long, long) ...
+ * 
+ *         3. Hace auxtoboxing: metodo1(Integer, Integer) pero NO metodo1(Long,
+ *         Long) porque implicaría una ampliación de tipo y un autoboxing.
+ * 
+ *         4. Busca un método con argumentos variables, varargs: metodo1(int ... v)
  * 
  *         Como regla general, en toda expresión el tipo con mayor tamaño domina
  *         sobre el resto.

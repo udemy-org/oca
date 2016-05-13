@@ -8,12 +8,8 @@ package es.smartcoding.oca.seccion4;
  * 
  *         Los constructores
  * 
- *         En esta lección veremos qué son lo constructores, métodos especiales
- *         que tienen el mismo nombre que la clase y que no retornan nada, ni
- *         siquiera ‘void’.
- * 
- *         Aunque según alguna documentación lo que realmente retornan es una
- *         referencia, una instancia de la clase.
+ *         No tienen valor de retorno, ni siquiera void, lo que realmente
+ *         retornan es una referencia, una instancia de la clase.
  * 
  *         La palabra clave new busca un constructor y reserva espacio para un
  *         nuevo objeto. Los constructores normalmente se utilizan para
@@ -23,16 +19,16 @@ package es.smartcoding.oca.seccion4;
  *         hecho, this es una referencia al objeto actual.
  * 
  *         Java proporciona un constructor por defecto (sin parámetros) siempre
- *         y cuando no haya otros constructores.
+ *         y cuando no se definan otros constructores.
  * 
  *         Como cualquier otro miembro, no podemos acceder a un constructor
- *         private; un constructor private puede ser útil cuando tenemos una
- *         clase con métodos estáticos o cuando queremos tener control de cómo
- *         se crean las instancias de una clase.
+ *         private; un constructor private puede ser útil para prevenir la
+ *         creación de instancias indiscriminadamente, como cuando tenemos una
+ *         clase sólo con métodos estáticos.
  * 
  *         Dentro de un constructor podemos invocar otros constructores de la
  *         propia clase pero sin utilizar la palabra clave new (que no tendria
- *         el efecto deseado), sino la palabra clave this que debe ser la
+ *         el efecto deseado), sino el método this() que debe ser la
  *         primera línea de código de un constructor.
  * 
  *         Las constantes finales deben ser asignadas exactamente una vez y
@@ -60,8 +56,8 @@ package es.smartcoding.oca.seccion4;
  *         3. La declaración de variables de instancia y bloques de
  *         inicialización de instancia (en el mismo orden en que aparecen)
  *         ocupan el tercer lugar.
- *         
- *         4. El constructor ocupa el cuarto lugar.
+ * 
+ *         4. El propio constructor de la clase ocupa el cuarto y último lugar.
  *
  */
 

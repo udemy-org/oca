@@ -15,7 +15,7 @@ import static java.util.Arrays.asList;
 import static java.util.Arrays.*;
 
 /*
- * Aunque usando comodines es posible importar implícitamente un método más de una vez.
+ * Aunque usando comodines es posible importar implícitamente un método más de una vez!!!.
  */
 
 /**
@@ -37,8 +37,9 @@ import static java.util.Arrays.*;
  *         variables locales se sitúan en la pila.
  * 
  *         El método main, que hemos usado ampliamente, es público y estático
- *         con el objetivo de que el cargador de clases no necesite crear una
- *         instancia de la clase para invocarlo.
+ *         con el objetivo de que sea accesible desde cualquier parte y que el
+ *         cargador de clases no necesite crear una instancia de la clase para
+ *         invocarlo.
  * 
  *         Aparte del método main, declaramos miembros estáticos en varios
  *         escenarios:
@@ -47,12 +48,13 @@ import static java.util.Arrays.*;
  *         Math.
  * 
  *         2. Cuando queremmos definir estado que sea compartido por todas las
- *         instancias de una clase.
+ *         instancias de una clase. Por ejemplo, el número de instancias que
+ *         tiene un clase.
  * 
  *         Y RECUERDA, LOS METODOS ESTÁTICOS SÓLO PUEDEN ACCEDER A OTROS
- *         MIEMBROS ESTÁTICOS. EN CAMBIO, LOS MÉTODOS NO ESTÁTICOS PUEDEN
- *         ACCERDER A MIEMBROS DE CLASE (ESTÁTICOS) COMO DE INSTANCIA (NO
- *         ESTÁTICOS).
+ *         MIEMBROS ESTÁTICOS. EN CAMBIO, LOS MÉTODOS DE INSTANCIA (NO
+ *         ESTÁTICOS) PUEDEN ACCERDER TANTO A MIEMBROS DE CLASE (ESTÁTICOS) COMO
+ *         DE INSTANCIA (NO ESTÁTICOS).
  */
 
 class DemoStatic {
@@ -82,7 +84,7 @@ class DemoStaticInit {
 	 */
 	private static final int MAX_ELEM;
 	private static final int CONST1 = 0;
-	// private static final int CONST2; // No compila
+	// private static final int CONST2; // No compila, no está inicializada
 	/*
 	 * Los bloques de inicialización estáticos se ejecutan cuando la clase se
 	 * usa por primera vez.
@@ -127,9 +129,9 @@ public class Leccion_4_03_B {
 		ds3.m1();
 		ds1 = null;
 		/*
-		 * ds1 es todavia un objeto DemoStatic!!!
+		 * ds1 es todavia un objeto DemoStatic
 		 * 
-		 * Totalmente válido para invocar un método estático.
+		 * Totalmente válido para invocar un método estático!!!
 		 */
 		ds1.m1();
 		/*
