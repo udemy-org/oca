@@ -48,6 +48,9 @@ package es.smartcoding.oca.seccion5;
  *         sigue las mismas reglas de sobrescritura de métodos en cuanto a nivel
  *         de visibilidad, firma y gestión de excepciones.
  * 
+ *         5. Una clase abastracta puede tener métodos abstractos y no
+ *         abstractos.
+ * 
  *
  */
 abstract class Figura {

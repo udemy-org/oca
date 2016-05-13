@@ -8,13 +8,14 @@ package es.smartcoding.oca.seccion5;
  * 
  *         El polimorfismo
  * 
- *         Java soporta el polimorfismo, la propiedad que tienen los objetos de
- *         tomar diferentes formas.
+ *         Un objeto Java puede asignarse:
  * 
- *         Para ser más preciso, una objeto Java puede asignarse a una
- *         referencia del mismo tipo, a una referencia de la superclase, o a una
- *         referencia de una interfaz que la implemente ya sea directa o
- *         indirectamente.
+ *         1. A una referencia del mismo tipo
+ * 
+ *         2. A una referencia de la superclase
+ * 
+ *         3. O a una referencia de una interfaz que implemente ya sea
+ *         directa o indirectamente
  * 
  *         Como ves, creamos un único objeto de MiClaseConcreta que después
  *         asignamos a diferentes referencias y el código compila y funciona sin

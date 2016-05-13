@@ -9,7 +9,7 @@ package es.smartcoding.oca.seccion6;
  *         Llamada a métodos que lanzan excepciones
  * 
  *         Las excepciones son nuestras amigas. Nos ayudan a depurar nuestro
- *         código.
+ *         código de errores.
  * 
  */
 

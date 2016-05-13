@@ -8,7 +8,7 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Qué son las excepciones?
  * 
- *         Un programa puede fallas por numeros razones, algunas que podemos
+ *         Un programa puede fallar por numeros razones, algunas que podemos
  *         solucionar nosotros como programadores y otras que se escapan a
  *         nuestro control.
  *
@@ -20,7 +20,7 @@ package es.smartcoding.oca.seccion6;
  *         excepciones y errores que se puedan producir.
  * 
  *         Un error está encapsulado en la clase java.lang.Error y supone una
- *         condición de la que es practicamente imposible de recuperarse, por
+ *         condición de la que es prácticamente imposible de recuperarse, por
  *         ejemplo, cuando no queda memoria.
  * 
  *         Las excepciones en tiempo de ejecución están encapsulados en la clase
