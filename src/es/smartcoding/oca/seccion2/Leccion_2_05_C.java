@@ -33,11 +33,12 @@ public class Leccion_2_05_C {
 		for (int i = 0; i < 10; i++) {
 			System.out.println(i);
 		}
-		int i = 0;
+		
 		System.out.println("*** Bucle 3 ***");
 		/*
 		 * Este bucle es totalmente equivalente al anterior. Escribe de 0 a 9.
 		 */
+		int i = 0;
 		for (; i < 10;) {
 			System.out.println(i);
 			i++;

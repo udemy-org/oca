@@ -50,12 +50,12 @@ public class Leccion_2_05_A {
 		int k = 10;
 		if (k < 5) {
 			k++;
-			System.out.println(k);
+			System.out.println("k: " + k);
 		}
 		int l = 10;
 		if (l < 5)
 			l++;
-			System.out.println(l);
+			System.out.println("l: " + l);
 		/*
 		 * Con la orden if-then-else debemos tener especial cuidado.
 		 */
@@ -105,7 +105,7 @@ public class Leccion_2_05_A {
 		 * Esta expresión compila porque aunque retorna un tipo diferente en
 		 * cada caso, el método println sabe como convertirlo a cadena.
 		 */
-		System.out.println((y > 5) ? 21 : "OCA");
+		System.out.println("operador ternario" + ((y > 5) ? 21 : "OCA"));
 		/*
 		 * La orden switch es una estructura de decisión compleja.
 		 * 

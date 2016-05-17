@@ -10,7 +10,7 @@ package es.smartcoding.oca.seccion2;
  * 
  *         Los operadores pueden ser unarios, binarios y ternarios que pueden aplicarse a uno, dos o tres operadores respectivamente.
  * 
- *         Aunque puede modificarse con paréntesis, la prioridad de los operadores Java es la siguinte (de más a menos):
+ *         La prioridad de los operadores Java es esta que  ves aqui (ordenados de más a menos prioritarios):
  * 
  *         Operadores unarios ++, --
  *         Operadores unarios + - !
@@ -28,14 +28,10 @@ package es.smartcoding.oca.seccion2;
 public class Leccion_2_01 {
 
 	public static void main(String[] args) {
-		/*
-		 * Durante el examen debes de ser capaz de evaluar expresiones como esta.
-		 */
 		int i = 1;
-		int j = 2 + 3 * -++i;
-		System.out.println(i);
-		System.out.println(j);
-
+		int j = -i;
+		System.out.println("i: " + i);
+		
 	}
 
 }
