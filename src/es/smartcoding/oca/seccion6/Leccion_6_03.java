@@ -8,14 +8,11 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Tipos de excepciones comunes
  * 
- *         En esta lección estudiaremos cuáles son las excepciones más comunes
- *         que debes conocer durante el examen oficial.
- * 
- *         El examen OCA questionará tu conocimiento sobre tres tipos de
+ *         El examen OCA cuestionará tu conocimiento sobre tres tipos de
  *         excepciones: excepciones no comprobadas o excepciones en tiempo de
  *         ejecución, excepciones comprobadas y errores.
  * 
- *         Las excepciones runtime extienden RuntimeException no tienen que ser
+ *         Las excepciones runtime extienden RuntimeException, no necesitan ser
  *         ni tratadas ni declaradas. Pueden ser lanzadas por el programador o
  *         por la Java Virtual Machine y estas son las más comunes:
  * 

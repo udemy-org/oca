@@ -10,16 +10,13 @@ import es.smartcoding.oca.seccion4.code.p1.Alfa;
  * 
  *         Aplicando los modificadores de acceso
  * 
- *         Hay cuatro modificadores de acceso public, private, protected y
- *         default. En esta lección aprenderemos el significado de cada
- *         modificador de acceso de más a menos restrictivo y cómo utilizarlos
- *         así como el significado de de la palabra clave static.
- * 
  *         Los miembros private sólo son accesibles desde la propia clase.
  * 
- *         Los miembros default además son accesibles desde el mismo paquete.
+ *         Los miembros default son accesibles desde la propia clase y desde el
+ *         mismo paquete.
  * 
- *         Los miembros protected además son accesibles desde las subclases.
+ *         Los miembros protected son accesibles desde la propia clase, desde el
+ *         mismo paquete y desde las subclases.
  * 
  *         Los miembros public son accesibles desde cualquier parte.
  *
@@ -27,9 +24,6 @@ import es.smartcoding.oca.seccion4.code.p1.Alfa;
  */
 public class Leccion_4_03_A {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Alfa alfa = new Alfa();
 		/*
@@ -56,8 +50,8 @@ public class Leccion_4_03_A {
 	/*
 	 * Esta es una de las partes más duras del examen. Asegurate de que la
 	 * trabajas a fondo, revisando estos ejemplos hasta que los entiendas
-	 * completamente, respondiendo preguntas de tipo test y haciendos tus
-	 * propios ejemplos.
+	 * completamente, respondiendo corectamente a las preguntas de los tests y
+	 * haciendos tus propios ejemplos.
 	 */
 
 }

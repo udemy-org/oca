@@ -13,10 +13,7 @@ import java.util.List;
  * 
  *         La clase ArrayList
  * 
- *         En esta lección veremos cómo la clase ArrayList supera la limitación
- *         de los arrays al poder añadir elementos a una colección.
- * 
- *         Al crear un array debemos saber cuantos elementos tendrá. Este no es
+ *         Al crear un array debemos saber cuantos elementos tendrá, pero este no es
  *         siempre el caso. El tamaño de la clase ArrayList igual que la clase
  *         StringBuilder puede cambiar en tiempo de ejecución.
  * 
@@ -29,9 +26,6 @@ import java.util.List;
  */
 public class Leccion_3_05 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * A la hora de crear un objeto ArrayList tenemos tres constructores:

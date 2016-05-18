@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion6;
  * 
  *         La orden try
  * 
- *         En esta lección aprenderemos a tratar las excepciones mediante un
- *         bloque try/catch.
- * 
  *         Java utiliza la orden try para separar el código que puede lanzar una
  *         excepción del código que trata la excepción.
  * 

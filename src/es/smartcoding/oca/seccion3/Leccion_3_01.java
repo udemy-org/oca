@@ -8,16 +8,13 @@ package es.smartcoding.oca.seccion3;
  * 
  *         La creación y manipulación de cadenas
  * 
- *         En esta lección veremos qué es un String, (una secuencias de
- *         caracteres), cómo crear objetos de tipo String y cómo manipularlos,
+ *         En esta lección veremos que un String es una secuencia de
+ *         caracteres, cómo crear objetos de tipo String y cómo manipularlos,
  *         así como la naturaleza inmutable de la clase String.
  *
  */
 public class Leccion_3_01 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * Estas cadenas no forman parte del pool, sus direcciones de memoria

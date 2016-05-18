@@ -8,9 +8,6 @@ package es.smartcoding.oca.seccion5;
  * 
  *         La implementación de interfaces
  * 
- *         En esta lección abordaremos el tema de las interfaces, qué son y cómo
- *         implementarlas.
- * 
  *         Aunque Java no permite la herencia múltiple, sí que permite a una
  *         clase implementar cualquier número de interfaces.
  * 
@@ -33,12 +30,11 @@ package es.smartcoding.oca.seccion5;
  *         3. Una interfaz no puede ser final.
  * 
  *         4. Las interfaces definidas a alto nivel (en su propio fichero)
- *         pueden ser public o default y se asume abstract. Por lo tanto, una
- *         interfaz no puede ser public, protected ni final.
+ *         pueden ser public o default y se asume abstract.
  * 
- *         5. Implícitdamente, todos los métodos sin implementación, es decir
- *         por defecto, de una interfaz son abtract y public, por lo tanto un
- *         método no puede ser private, protected ni final.
+ *         5. Implícitdamente, todos los métodos de una interfaz son abtract y
+ *         public, por lo tanto un método no puede ser private, protected ni
+ *         final.
  * 
  *         Importante, ni las clases ni las interfaces internas forman parte de
  *         los objetivos del examen OCA.
@@ -47,7 +43,7 @@ package es.smartcoding.oca.seccion5;
  *         interfaces que definen el mismo método por defecto. Este es un caso
  *         particular y sólo compilará si la clase concreta implementa el método
  *         por defecto, lo que elimina la ambiguedad. Además, los métodos
- *         estáticos no se heredan.
+ *         estáticos de una interfaz no se heredan.
  * 
  * 
  */

@@ -10,10 +10,7 @@ import java.util.List;
  * 
  *         El diseño de métodos
  * 
- *         En esta lección estudiaremos en detalle las diferentes partes de un
- *         método.
- * 
- *         La definición de un método consta de varios elementos:
+ *         La definición de un método consta de varias partes:
  * 
  *         1. Un modificador de acceso opcional.
  * 
@@ -136,9 +133,6 @@ public class Leccion_4_01 {
 
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 	}

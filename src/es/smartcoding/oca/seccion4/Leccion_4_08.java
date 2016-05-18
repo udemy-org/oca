@@ -13,9 +13,6 @@ import java.util.function.Predicate;
  * 
  *         Las expresiones lambda simples
  * 
- *         En esta lección aprenderemos a escribir expresiones sencillas al
- *         estilo del paradigma de programación funcional.
- * 
  *         En esencia Java es un lenguaje orientado a objetos, pero Java 8
  *         añadió la posibilidad de escribir código al estilo funcional, más
  *         declarativo.
@@ -23,9 +20,9 @@ import java.util.function.Predicate;
  *         La programación funcional se centra en el Qué queremos hacer y no en
  *         el Cómo.
  * 
- *         La programación funcional utiliza expresiones lambda que pueden
- *         definir como métodos anónimos ya que tiene parámetros y cuerpo pero
- *         no un nombre como un verdadero método.
+ *         La programación funcional utiliza expresiones lambda que se pueden
+ *         interpretar como métodos anónimos ya que tiene parámetros y cuerpo
+ *         pero no un nombre como un verdadero método.
  * 
  *         Las expresionres lambda o simplemente lambdas se las conoce como
  *         closures en otros lenguajes, aunque Java las ha simplificado
@@ -37,13 +34,14 @@ import java.util.function.Predicate;
  * 
  *         De cara al examen OCA necesitas conocer la interfaz Predicate, una
  *         interfaz funcional porque define un único método abstracto test.
+ * 
+ *         De todas formas, te recomiendo que dediques a las expresiones
+ *         lambda, referencias a métodos, interfaces funcionales y streams
+ *         algún tiempo porque cada vez vas a estar más presentes.
  *
  */
 public class Leccion_4_08 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Predicate<String> p1 = s -> s.startsWith("A");
 		/*
@@ -71,7 +69,8 @@ public class Leccion_4_08 {
 		 * pero para el examen sólo necesitas conocer uno, el método removeIf de
 		 * la clase ArrayList.
 		 */
-		List<String> lista1 = Arrays.asList("ABCDMX", "ABCX", "ABCD", "FGHX", "DFMTU");
+		List<String> lista1 = Arrays.asList("ABCDMX", "ABCX", "ABCD", "FGHX",
+				"DFMTU");
 		lista1 = new ArrayList<String>(lista1);
 		lista1.removeIf(p3);
 		System.out.println(lista1);

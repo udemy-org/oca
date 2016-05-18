@@ -6,20 +6,19 @@ package es.smartcoding.oca.seccion2;
 /**
  * @author pep
  * 
+ * 		   Las estructuras de control de Java
+ * 
  *         Un bucle (loop) es una estructura de control de repetición.
  * 
- *         Las llaves son opcionales.
+ *         Las llaves son opcionales cuando el cuerpo esta formado por una única instrucción.
  *
  */
 public class Leccion_2_05_B {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		int i = 0;
-		System.out.println("*** blucle 1 ***");
+		System.out.println("*** bucle 1 ***");
 		/*
 		 * Bucle infinito, no incrementa la variable i. Escribe 0
 		 * indefinidamente.
@@ -27,7 +26,7 @@ public class Leccion_2_05_B {
 		// while(i < 10) {
 		// System.out.println(i);
 		// }
-		System.out.println("*** blucle 2 ***");
+		System.out.println("*** bucle 2 ***");
 		i = 0;
 		/*
 		 * Es es un bucle clásico, al final del bloque se incrementa la variable
@@ -37,7 +36,7 @@ public class Leccion_2_05_B {
 			System.out.println(i);
 			i++;
 		}
-		System.out.println("*** blucle 3 ***");
+		System.out.println("*** bucle 3 ***");
 		i = 0;
 		/*
 		 * Este bucle se comporta exactamente igual que el anterior. Escribe de
@@ -46,7 +45,7 @@ public class Leccion_2_05_B {
 		while (i < 10) {
 			System.out.println(i++);
 		}
-		System.out.println("*** blucle 4 ***");
+		System.out.println("*** bucle 4 ***");
 		i = 0;
 		/*
 		 * Este bucle primero incrementa la variable i y después la escribe.
@@ -55,7 +54,7 @@ public class Leccion_2_05_B {
 		while (i < 10) {
 			System.out.println(++i);
 		}
-		System.out.println("*** blucle 5 ***");
+		System.out.println("*** bucle 5 ***");
 		i = 0;
 		/*
 		 * Este bucle primero evalúa la condición y después incrementa la
@@ -64,7 +63,7 @@ public class Leccion_2_05_B {
 		while (i++ < 10) {
 			System.out.println(i);
 		}
-		System.out.println("*** blucle 6 ***");
+		System.out.println("*** bucle 6 ***");
 		i = 0;
 		/*
 		 * Este bucle primero incrementa la variable i y después evalúa la
@@ -81,7 +80,7 @@ public class Leccion_2_05_B {
 		 * Java recomienda utilizar el bucle while, pero en la práctica uno
 		 * puede ser más adecuado que otro.
 		 */
-		System.out.println("*** blucle 7 ***");
+		System.out.println("*** bucle 7 ***");
 		i = 0;
 		do {
 			System.out.println(i);

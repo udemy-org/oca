@@ -10,8 +10,8 @@ package es.smartcoding.oca.seccion4;
  * 
  *         Las clases inmutables tienen una característica tan simple como útil.
  *         Una vez creadas no cambian su estado, lo que nos garantiza que
- *         podemos pasearlas por cualquier parte de la aplicación sin que cambie
- *         su estado.
+ *         podemos 'pasearlas' por cualquier parte de la aplicación sin que
+ *         cambie su estado.
  * 
  *         La forma de conseguirlo es igualmente simple, basta con declarar las
  *         propiedades como private y no proporcionar ningún método setter. La
@@ -36,10 +36,11 @@ class MiClaseInmutable {
 }
 
 /*
- * La clase MiClaseInmutableFalsa a pesar de no tener ningún método setter y
- * tener su propiedad privada, no es inmutable. El método getter retorna una
- * referencia a StringBuilder que no es inmutable. Por lo tanto cualquier cambio
- * en esa referencia modificará la propiedad original.
+ * Lamentablemente, no siempre es el caso: la clase MiClaseInmutableFalsa a
+ * pesar de no tener ningún método setter y tener su propiedad privada, no es
+ * inmutable. El método getter retorna una referencia a StringBuilder que no es
+ * inmutable. Por lo tanto cualquier cambio en esa referencia modificará la
+ * propiedad original.
  * 
  * La solución es no retornar el original sino una copia, lo que se llama una
  * copia defensiva.
@@ -55,9 +56,10 @@ class MiClaseInmutableFalsa {
 
 	public StringBuilder getCodigoSecreto() {
 		// return codigoSecreto;
+		// copia defensiva
 		return new StringBuilder(codigoSecreto);
 	}
-	
+
 	// public String getCodigoSecreto() {
 	// return codigoSecreto.toString();
 	// }

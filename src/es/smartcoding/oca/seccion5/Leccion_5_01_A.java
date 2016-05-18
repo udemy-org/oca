@@ -8,24 +8,22 @@ package es.smartcoding.oca.seccion5;
  * 
  *         La herencia
  * 
- *         En esta lección estudiaremos uno de los pilares de la Programación
- *         Orientada a Objetos: la herencia.
- * 
- *         Cuando creamos una clase en Java implícitamente estamos heredando de
+ *         Cuando creamos una clase en Java, implícitamente estamos heredando de
  *         la clase java.lang.Object. Eso quiere decir que sus miembros publicos
  *         y protected como los métodos toString, equals, etc., están presentes
  *         en todas las clases.
  * 
- *         De la misma manera nuestras clases pueden heredar de exactamente una
+ *         De la misma manera, nuestras clases pueden heredar de exactamente una
  *         sola clase siempre que no sea final.
  * 
  *         La palabra clave extends es la que crea una relación de herencia
- *         entre clases. Una relación que se conoce como ES-UN.
+ *         entre clases. Una relación que se conoce como ES-UN (IS-A).
  * 
- *         Es fácil de ver que un PortaAviones es un BarcoDeGuerra y que un
- *         BarcoDeGuerra es una Barco.
+ *         Es fácil de ver que si enterprise es una instancia de PortaAviones,
+ *         PortaAviones es una subclase de BarceoDeGuerra y BarcoDeGuerra es
+ *         una subclase de Barco, entonces enterprise es una Barco.
  * 
- *         La palabra clave super se utiliza para invocar al constructor de la
+ *         El método super() se utiliza para invocar al constructor de la
  *         superclase.
  * 
  *         Igual que hay un constructor por defecto, todo contructor tiene una
@@ -35,10 +33,10 @@ package es.smartcoding.oca.seccion5;
  *         En resumen, cuando hay herencia los constructores deben cumplir unas
  *         reglas:
  * 
- *         1. En este contexto, el método this() se utiliza para invocar otros
- *         constructores dentro de la misma clase, y el método super() para
- *         invocar otros constructores de la clase padre. Uno u otro debe ser la
- *         primera orden de un constructor.
+ *         1. El método this() se utiliza para invocar otros constructores
+ *         dentro de la misma clase, y el método super() para invocar otros
+ *         constructores de la clase padre. Uno u otro debe ser la primera orden
+ *         de un constructor.
  * 
  *         2. Java añade una invocación a super() implícitamente en cada
  *         constructor que llama al costructor por defecto de la clase padre.
@@ -61,7 +59,8 @@ package es.smartcoding.oca.seccion5;
  *         La palabra reservada this y el el método this() no están relacionadas
  *         en Java, this se utiliza para acceder a miembros (propiedades y
  *         métodos) visibles de la clase (posiblemente heredados) y this() se
- *         utiliza desde un constructor para invocar otro constructor.
+ *         utiliza desde un constructor para invocar otro constructor de la
+ *         misma clase.
  * 
  *         Con la palabra reservada super y super() pasa algo parecido, super se
  *         utiliza para acceder a miembros sólo de la superclase, y super() se
@@ -69,7 +68,7 @@ package es.smartcoding.oca.seccion5;
  */
 
 /*
- * extends java.lang.Object implícito
+ * extends java.lang.Object implícito, un barco es un Object
  */
 class Barco {
 	protected double eslora;
@@ -102,6 +101,10 @@ class BarcoDeGuerra extends Barco {
 	// public BarcoDeGuerra() {
 	// super(0.0, 0.0, 0.0);
 	// }
+
+	public BarcoDeGuerra(double eslora, double manga, double calado) {
+		this(eslora, manga, calado, 0);
+	}
 
 	public BarcoDeGuerra(double eslora, double manga, double calado,
 			int marineros) {
