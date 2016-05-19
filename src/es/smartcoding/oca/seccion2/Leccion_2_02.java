@@ -8,9 +8,7 @@ package es.smartcoding.oca.seccion2;
  * 
  *         Los operadores aritméticos binarios
  * 
- *         En esta lección revisaremos los operadores aritméticos binarios, como la suma, resta, etc.
- * 
- *         Los operadores + y += están sobrecargados, cuando un operando o más son de tipo cadena actúan como una concatenación donde el resultado es una cadena.
+ *         Recuerda que los operadores + y += están sobrecargados, cuando un operando o más son de tipo cadena actúan como una concatenación donde el resultado es una cadena.
  * 
  *         El operador módulo % calcula el resto de la division de dos números.
  * 
@@ -33,19 +31,13 @@ public class Leccion_2_02 {
 		 */
 		int x = 2 * ((5 + 3) * 4 - 8);
 		System.out.println("x: " + x);
+		
 		// COMPILA, pero lanza java.lang.ArithmeticException:
 		// System.out.println(1 % 0);
+		
 		// Operador módulo con negativos
 		System.out.println("-7 % 3: " + -7 % 3);
-		System.out.println("-7 % -3: " + -7 % -3);
-		System.out.println("7 % -3: " + 7 % -3);
-		// El operador modulo con operandos decimales no entra en el examen
-		System.out.println("7.5 % 3: " + 7.5 % 3);
-		System.out.println("7.1 % 3.5: " + 7.1 % 3.5);
-		// NaN. No genera ninguna excepción.
-		System.out.println("1.0 % 0: " + 1.0 % 0);
-		// NaN. No genera ninguana excepción.
-		System.out.println("1 % 0: " + 1 % 0.);
+		
 		// Ejemplos de promoción
 		long l1 = 1;
 		// int i = 2 * l1; // NO COMPILA, un entero no puede contener un long
@@ -67,12 +59,21 @@ public class Leccion_2_02 {
 		for (int k = 0; k < 10; k++) {
 			t +=  0.1;
 		}
-		System.out.println("t: " + t);
-		int big = 1234567890;
-	    float approx = big;
-	    System.out.println("big: " + big);
-	    System.out.println("approx: " + approx);
-	    System.out.println("errores de conversión: " + (big - (int)approx));
+
 	}
 
 }
+
+
+
+
+
+
+
+
+//System.out.println("t: " + t);
+//int big = 1234567890;
+//float approx = big;
+//System.out.println("big: " + big);
+//System.out.println("approx: " + approx);
+//System.out.println("errores de conversión: " + (big - (int)approx));
