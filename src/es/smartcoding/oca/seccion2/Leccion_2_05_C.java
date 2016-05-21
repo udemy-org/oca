@@ -24,8 +24,8 @@ public class Leccion_2_05_C {
 		 * Este es un bucle infinito.
 		 */
 		System.out.println("*** Bucle 1 ***");
-		// for (;;) {
-		// }
+//		 for (;;) {
+//		 }
 		/*
 		 * El for básico tiene este aspecto. Escribe de 0 a 9.
 		 */
@@ -70,3 +70,21 @@ public class Leccion_2_05_C {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

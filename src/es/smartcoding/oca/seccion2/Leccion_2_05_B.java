@@ -73,7 +73,7 @@ public class Leccion_2_05_B {
 			System.out.println(i);
 		}
 		/*
-		 * Java también tiene el bucle do. La principal diferencia es que el
+		 * Finalmente, el bucle 7 es un bucle do-while. La principal diferencia es que el
 		 * bucle do se ejecuta por lo menos una vez, ya que la evaluació de la
 		 * condición está al final. Escribe de 0 a 9.
 		 * 
@@ -88,3 +88,22 @@ public class Leccion_2_05_B {
 		} while (i < 10);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
