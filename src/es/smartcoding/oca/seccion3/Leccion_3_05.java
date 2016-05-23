@@ -39,23 +39,16 @@ public class Leccion_3_05 {
 		ArrayList list1 = new ArrayList();
 		ArrayList list2 = new ArrayList(10);
 		ArrayList list3 = new ArrayList(list2);
-		/*
-		 * Desde Java 5, con la introducción de genéricos, podemos especificar
-		 * el tipo de contenido.
-		 */
+		
+		// Desde Java 5, con la introducción de genéricos, podemos especificar el tipo de contenido.
 		ArrayList<String> list4 = new ArrayList<String>();
-		/*
-		 * Y desde Java 7, podemos omitir el tipo a la hora de invocar al
-		 * constructor, puesto que el compilador lo puede inferir.
-		 * 
-		 * Esto se consigue con el operador diamante (diamond)
-		 */
+
+		// Y desde Java 7, podemos omitir el tipo a la hora de invocar al constructor, puesto que el compilador lo puede inferir. Esto se consigue con el operador diamante (diamond)
 		ArrayList<String> list5 = new ArrayList<>();
-		/*
-		 * Puesto que la clase ArrayList implementa la interfaz List, esto es
-		 * totalmente válido.
-		 */
+		
+		// Puesto que la clase ArrayList implementa la interfaz List, esto es totalmente válido.
 		List<String> list6 = new ArrayList<>();
+		
 		/*
 		 * El método add es probablemente el método más utilizado. Como no hemos
 		 * especificado ningún parámetro en el momento de la creación, Java
@@ -64,7 +57,8 @@ public class Leccion_3_05 {
 		list1.add("Alfa");
 		list1.add(123);
 		list1.add(Boolean.TRUE);
-		System.out.println(list1);
+		System.out.println("list1: " + list1);
+		
 		/*
 		 * Pero qué ocurre con list4? Dado que hemos especificado que contenga
 		 * sólo cadenas el compilador detectara cualquier intento de uso
@@ -75,31 +69,23 @@ public class Leccion_3_05 {
 		// list4.add(123); // NO COMPILA
 		list4.add(1, "Bravo");
 		System.out.println(list4);
-		/*
-		 * El método remove, elimina el primer elemento que coincida con el
-		 * argumento, o un elemento en una posición específica.
-		 */
+		
+		// El método remove, elimina el primer elemento que coincida con el argumento, o un elemento en una posición específica.
 		list4.remove("Bravo");
 		System.out.println(list4);
 		list4.remove(0);
 		System.out.println(list4);
-		/*
-		 * Si intentamos eliminar un índice que no existe, obtenemos una
-		 * excepción java.lang.IndexOutOfBoundsException.
-		 */
+		
+		// Si intentamos eliminar un índice que no existe, obtenemos una excepción java.lang.IndexOutOfBoundsException.
 		// list4.remove(10);
-		/*
-		 * En cambio, si intentamos eliminar un objeto que no existe,
-		 * sencillamente retorna false, pero no se lanza ninguana excepción.
-		 */
+		// En cambio, si intentamos eliminar un objeto que no existe, sencillamente retorna false, pero no se lanza ninguana excepción.
 		boolean obj = list4.remove("Zulu");
 		System.out.println(obj);
-		/*
-		 * También existe el método removeIf, pero lo trataremos más tarde
-		 * porque utiliza expresiones lambda.
-		 */
+		
+		// También existe el método removeIf, pero lo trataremos más tarde porque utiliza expresiones lambda.
 		list4.removeIf(e -> e.startsWith("K"));
 		System.out.println(list4);
+
 		/*
 		 * Por otro lado, el método set reemplaza un elemento por otro y lanza
 		 * una excepcion java.lang.IndexOutOfBoundsException si no existe el
@@ -107,17 +93,15 @@ public class Leccion_3_05 {
 		 */
 		list4.set(0, "Zulu");
 		System.out.println(list4);
+		
 		/*
-		 * Los métodos isEmpty, size, clear y contains, hacen exactamente lo que
-		 * dicen:
+		 * Los métodos isEmpty, size, clear y contains, hacen exactamente lo que dicen:
 		 * 
-		 * isEmpty retorna true si la lista esta vacía (que es diferentes de
-		 * null).
+		 * isEmpty retorna true si la lista esta vacía (que es diferentes de null).
 		 * 
 		 * size retorna el número de elementos de la lista (un entero).
 		 * 
-		 * clear elimina todos los elementos de la lista (no se lanza ninguna
-		 * excepción si la lista ya está vacia).
+		 * clear elimina todos los elementos de la lista (no se lanza ninguna excepción si la lista ya está vacia).
 		 * 
 		 * contains retorna true si un elemento esta presente en la lista.
 		 */
@@ -127,10 +111,8 @@ public class Leccion_3_05 {
 		list4.clear();
 		list4.clear();
 		System.out.println(list4);
-		/*
-		 * Finalmente el método equals retornará true cuando dos listas tengan
-		 * los mismos elementos y en el mismo orden.
-		 */
+		
+		// Finalmente el método equals retornará true cuando dos listas tengan los mismos elementos y en el mismo orden.
 		list5.clear();
 		list6.clear();
 		System.out.println(list5);

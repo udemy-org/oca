@@ -18,76 +18,71 @@ import java.util.Arrays;
 public class Leccion_3_04 {
 
 	public static void main(String[] args) {
-		/*
-		 * La manera más sencilla de crear un array es esta, donde cada elemento es un entero y por defecto toma el valor de 0.
-		 */
+		
+		// La manera más sencilla de crear un array es esta, donde cada elemento es un entero y por defecto toma el valor de 0.
+		System.out.println("Array 1");
 		int[] numbers1 = new int[3];
 		for (int i = 0; i < numbers1.length; i++) {
 			System.out.println(numbers1[i]);
 		}
-		/*
-		 * Esta es otra forma de crear un array y de especificar cuáles son sus elementos.
-		 */
+
+		// Esta es otra forma de crear un array y de especificar cuáles son sus elementos.
+		System.out.println("Array 2");
 		int[] numbers2 = new int[] { 42, 55, 99 };
 		for (int i = 0; i < numbers2.length; i++) {
 			System.out.println(numbers2[i]);
 		}
-		/*
-		 * Esta es una versión reducida de la anterior, más conveniente. En este caso creamos un array anónimo.
-		 */
+
+		// Esta es una versión reducida de la anterior, más conveniente. En este caso creamos un array anónimo.
+		System.out.println("Array 3");
 		int[] numbers3 = { 42, 55, 99 };
 		for (int i = 0; i < numbers3.length; i++) {
 			System.out.println(numbers3[i]);
 		}
-		/*
-		 * En ocasiones puedes encontrar los corchetes junto a la variable
-		 * aunque hay una sutil diferencia.
-		 */
+		
+		// En ocasiones puedes encontrar los corchetes junto a la variable
 		int numbers4[] = { 42, 55, 99 };
-		/*
-		 * En el primer ejemplo, a es un array de enteros y b un entero. En el
-		 * segundo ejemplo en cambio, c y d son ambos arrays de enteros.
-		 */
+
+		// En el primer ejemplo, a es un array de enteros y b un entero. En el
 		int a[], b;
 		int[] c, d;
+
 		/*
 		 * Los arrays pueden ser de cualquier tipo, incluso de clases creadas por nosotros.
 		 * 
 		 * Un array de cadenas por ejemplo, no contiene cadenas sino referencias a cadenas y lo mismo pasa con cualquier otro tipo.
 		 * 
-		 * La implementación del método equals de un array simplemente comprueba si apuntan a la misma referencia.
-		 * 
+		 * La implementación del método equals de un array simplemente comprueba si apuntan al mismo objeto.
 		 */
 		String[] cadenas1 = { "alfa", "bravo", "charlie", "delta", "echo" };
+		// String[] cadenas2 = { "alfa", "bravo", "charlie", "delta", "echo" };
 		String[] cadenas2 = cadenas1;
-		System.out.println(Arrays.toString(cadenas1));
-		System.out.println(cadenas1.equals(cadenas2));
-		System.out.println(cadenas1);
-		System.out.println(cadenas2);
+		System.out.println("cadenas1: " + Arrays.toString(cadenas1));
+		System.out.println("cadenas1.equals(cadenas2): " + cadenas1.equals(cadenas2));
+		System.out.println("cadenas1 == cadenas2: " + (cadenas1 == cadenas2));
+		System.out.println("cadenas1: " + cadenas1);
+		System.out.println("cadenas2: " + cadenas2);
 		String alfa = "alfa", bravo = "bravo", charlie = "charlie";
 		String[] cadenas3 = { alfa, bravo, charlie };
-		System.out.println(Arrays.toString(cadenas3));
+		System.out.println("Arrays.toString(cadenas3): " + Arrays.toString(cadenas3));
 		alfa = bravo = charlie = null;
-		/*
-		 * cadenas3 continúa guardando las referencias iniciales.
-		 */
-		System.out.println(Arrays.toString(cadenas3));
+		
+		// cadenas3 continúa guardando las referencias iniciales.
+		System.out.println("Arrays.toString(cadenas3): " + Arrays.toString(cadenas3));
 		Object[] objects = new String[] { "alfa", "bravo", "charlie", "delta" };
 		System.out.println(Arrays.toString(objects));
-		/*
-		 * Lanza java.lang.ArrayStoreException en tiempo de ejecución.
-		 */
+		// Lanza java.lang.ArrayStoreException en tiempo de ejecución.
 		// objects[0] = new StringBuilder();
 		String[] cadenes4 = { "cana", "caña", "cama" };
 		Arrays.sort(cadenes4);
-		System.out.println(Arrays.toString(cadenes4));
-		/*
-		 * El método binarySearch busca elementos dentro de una array ordenado. Si un array no está ordenado, el resultado de la búsqueda será impredecible.
-		 */
+		System.out.println("Arrays.toString(cadenes4): " + Arrays.toString(cadenes4));
+		
+		// El método binarySearch busca elementos dentro de una array ordenado. Si un array no está ordenado, el resultado de la búsqueda será impredecible.
 		int pos = Arrays.binarySearch(cadenes4, "caña");
-		System.out.println(cadenes4[pos]);
+		System.out.println("cadenes4[pos]: " + cadenes4[pos]);
 		pos = Arrays.binarySearch(cadenes4, "cava");
-		System.out.println(pos);
+		System.out.println("pos: " + pos);
+		
 		/*
 		 * Java interpreta los arrays multidimensionales como arrays de arrays. Las matrices o arrays bidimensionales pueden ser simétricas de m x n elementos, 
 		 * o asimétricas donde cada fila puede tener un número diferente de columnas.
@@ -110,9 +105,8 @@ public class Leccion_3_04 {
 			}
 			System.out.println();
 		}
-		/*
-		 * Alternativamente puede recorrerse con dos bucles for-Each.
-		 */
+		
+		// Alternativamente puede recorrerse con dos bucles for-Each.
 		System.out.println("********");
 		for(int[] i: matriz2) {
 			for(int j: i) {

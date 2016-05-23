@@ -23,8 +23,7 @@ import java.util.GregorianCalendar;
  *         Trabajando con fechas y horas
  * 
  *         Java 8 ha renovado completamente el trabajo con fechas, horas, períodos, y zonas
- *         horarias: con las clases LocalDate, LocalTime, LocalDateTime entre
- *         otras.
+ *         horarias: con las clases LocalDate, LocalTime, LocalDateTime entre otras.
  * 
  *         En el examen suele quedar claro el formato de las fechas
  *         (Unos paises utilizan el formato 'dd/MM/yyyy' como
@@ -36,8 +35,7 @@ public class Leccion_3_06 {
 
 	public static void main(String[] args) {
 		/*
-		 * La clase java.time.LocalDate contiene sólo una fecha, con formato ISO-8601 como
-		 * 2010-08-31
+		 * La clase java.time.LocalDate contiene sólo una fecha, con formato ISO-8601 como 2010-08-31
 		 * 
 		 * La clase java.time.LocalTime contiene sólo una hora.
 		 * 
@@ -65,13 +63,12 @@ public class Leccion_3_06 {
 		LocalTime hora1 = LocalTime.of(6, 15);
 		LocalTime hora2 = LocalTime.of(6, 15, 30);
 		LocalTime hora3 = LocalTime.of(6, 15, 30, 200);
-		/*
-		 * También se puede combinar la fecha y la hora en un mismo objeto.
-		 * SIEMPRE a través de métodos estáticos.
-		 */
+
+		// También se puede combinar la fecha y la hora en un mismo objeto. SIEMPRE a través de métodos estáticos.
 		LocalDateTime fechaHora1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6,
 				15, 30);
 		LocalDateTime fechaHora2 = LocalDateTime.of(fecha1, hora1);
+		
 		/*
 		 * En versiones anteriores a Java 8, usábamos las clases Date y
 		 * Calendar.
@@ -130,7 +127,7 @@ public class Leccion_3_06 {
 		System.out.println(period1);
 		// Cada trimestre
 		Period period2 = Period.ofMonths(3);
-		System.out.println(period2);
+		System.out.println("period2: " + period2);
 		// Cada tres semanas
 		Period period3 = Period.ofWeeks(3);
 		System.out.println(period3);
