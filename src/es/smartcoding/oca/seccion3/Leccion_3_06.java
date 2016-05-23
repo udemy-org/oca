@@ -34,6 +34,7 @@ import java.util.GregorianCalendar;
 public class Leccion_3_06 {
 
 	public static void main(String[] args) {
+		
 		/*
 		 * La clase java.time.LocalDate contiene sólo una fecha, con formato ISO-8601 como 2010-08-31
 		 * 
@@ -70,12 +71,10 @@ public class Leccion_3_06 {
 		LocalDateTime fechaHora2 = LocalDateTime.of(fecha1, hora1);
 		
 		/*
-		 * En versiones anteriores a Java 8, usábamos las clases Date y
-		 * Calendar.
+		 * En versiones anteriores a Java 8, usábamos las clases Date y  Calendar.
 		 * 
 		 * Actualmente, la mayoria de constructores de la clase Date no están
-		 * recomendados (deprecated), y los meses empiezan en 0 lo que añade
-		 * confusión.
+		 * recomendados (deprecated), y los meses empiezan en 0 lo que añade confusión.
 		 */
 		Date date1 = new Date();
 		System.out.println(date1);
@@ -87,9 +86,7 @@ public class Leccion_3_06 {
 		Calendar calendar2 = new GregorianCalendar(2016, Calendar.APRIL, 21);
 		Date date3 = calendar2.getTime();
 		// Date date4 = new Date(2015, Calendar.JANUARY, 12); // Deprecated
-		/*
-		 * Manipular fechas con las nuevas clases de Java 8 es fácil.
-		 */
+		// Manipular fechas con las nuevas clases de Java 8 es fácil.
 		LocalDate date5 = LocalDate.of(2014, Month.JANUARY, 20);
 		// 2014-01-20
 		System.out.println(date5);
@@ -105,24 +102,17 @@ public class Leccion_3_06 {
 		date5 = date5.plusYears(5);
 		// 2019-02-28
 		System.out.println(date5);
-		/*
-		 * También tenemos la familia de métodos minus...
-		 */
+		// También tenemos la familia de métodos minus...
 		date5 = date5.minus(Period.ofDays(3));
 		System.out.println(date5);
 		date5 = date5.minus(1, ChronoUnit.YEARS);
 		System.out.println(date5);
-		/*
-		 * La clase LocalDate es inmutable, por lo tanto cuidado! este código no
-		 * tiene ningún efecto:
-		 */
+		// La clase LocalDate es inmutable, por lo tanto cuidado! este código no tiene ningún efecto:
 		date5.minusDays(1);
 		System.out.println(date5);
-		/*
-		 * En Java 8 Java define la clase Period. Hay cinco maneras de definir
-		 * un período:
-		 */
-		// Cada año
+		// En Java 8 Java define la clase Period. Hay cinco maneras de definir un período:
+		
+		// Estos son algunos ejemplos de periodos: Cada año
 		Period period1 = Period.ofYears(1);
 		System.out.println(period1);
 		// Cada trimestre
@@ -208,11 +198,9 @@ public class Leccion_3_06 {
 				.ofPattern("MMMM dd, yyyy, hh:mm");
 		System.out.println(dateTime.format(dateTimeFormatter1));
 		/*
-		 * Por último, nos queda por tratar el tema de la conversión de una
-		 * cadena en un objeto fecha.
+		 * Por último, nos queda por tratar el tema de la conversión de una cadena en un objeto fecha.
 		 * 
-		 * Tanto la clase LocalDate, LocalTime como LocalDateTime proporcionan
-		 * un método estático, parse, que puede transformar una cadena en fecha.
+		 * Tanto la clase LocalDate, LocalTime como LocalDateTime proporcionan un método estático, parse, que puede transformar una cadena en fecha.
 		 */
 		DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter
 				.ofPattern("MM dd yyyy");

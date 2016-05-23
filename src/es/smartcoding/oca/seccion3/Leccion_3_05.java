@@ -68,19 +68,19 @@ public class Leccion_3_05 {
 		list4.add("Charlie");
 		// list4.add(123); // NO COMPILA
 		list4.add(1, "Bravo");
-		System.out.println(list4);
+		System.out.println("list4: " + list4);
 		
 		// El método remove, elimina el primer elemento que coincida con el argumento, o un elemento en una posición específica.
 		list4.remove("Bravo");
-		System.out.println(list4);
+		System.out.println("list4: " + list4);
 		list4.remove(0);
-		System.out.println(list4);
+		System.out.println("list4: " + list4);
 		
 		// Si intentamos eliminar un índice que no existe, obtenemos una excepción java.lang.IndexOutOfBoundsException.
 		// list4.remove(10);
 		// En cambio, si intentamos eliminar un objeto que no existe, sencillamente retorna false, pero no se lanza ninguana excepción.
 		boolean obj = list4.remove("Zulu");
-		System.out.println(obj);
+		System.out.println("obj: " + obj);
 		
 		// También existe el método removeIf, pero lo trataremos más tarde porque utiliza expresiones lambda.
 		list4.removeIf(e -> e.startsWith("K"));
