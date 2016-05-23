@@ -10,35 +10,30 @@ import java.util.Arrays;
  * 
  *         Los arrays de Java
  * 
- *         Tanto la clase String como la clase StringBuilder están implementadas
- *         con una array de caracteres.
+ *         Tanto la clase String como la clase StringBuilder están implementadas con una array de caracteres.
  * 
- *         La clase StringBuilder sustituye su array de caracteres por otro cuando se
- *         queda sin espacio.
+ *         La clase StringBuilder sustituye su array de caracteres por otro cuando se queda sin espacio.
  *
  */
 public class Leccion_3_04 {
 
 	public static void main(String[] args) {
 		/*
-		 * La manera más sencilla de crear un array es esta, donde cada elemento
-		 * es un entero y por defecto toma el valor de 0.
+		 * La manera más sencilla de crear un array es esta, donde cada elemento es un entero y por defecto toma el valor de 0.
 		 */
 		int[] numbers1 = new int[3];
 		for (int i = 0; i < numbers1.length; i++) {
 			System.out.println(numbers1[i]);
 		}
 		/*
-		 * Esta es otra forma de crear un array y de especificar cuáles son sus
-		 * elementos.
+		 * Esta es otra forma de crear un array y de especificar cuáles son sus elementos.
 		 */
 		int[] numbers2 = new int[] { 42, 55, 99 };
 		for (int i = 0; i < numbers2.length; i++) {
 			System.out.println(numbers2[i]);
 		}
 		/*
-		 * Esta es una versión reducida de la anterior, más conveniente. En este
-		 * caso creamos un array anónimo.
+		 * Esta es una versión reducida de la anterior, más conveniente. En este caso creamos un array anónimo.
 		 */
 		int[] numbers3 = { 42, 55, 99 };
 		for (int i = 0; i < numbers3.length; i++) {
@@ -56,14 +51,12 @@ public class Leccion_3_04 {
 		int a[], b;
 		int[] c, d;
 		/*
-		 * Los arrays pueden ser de cualquier tipo, incluso de clases creadas
-		 * por nosotros.
+		 * Los arrays pueden ser de cualquier tipo, incluso de clases creadas por nosotros.
 		 * 
-		 * Un array de cadenas por ejemplo, no contiene cadenas sino referencias
-		 * a cadenas y lo mismo pasa con cualquier otro tipo.
+		 * Un array de cadenas por ejemplo, no contiene cadenas sino referencias a cadenas y lo mismo pasa con cualquier otro tipo.
 		 * 
-		 * La implementación del método equals de un array simplemente comprueba
-		 * si apuntan a la misma referencia.
+		 * La implementación del método equals de un array simplemente comprueba si apuntan a la misma referencia.
+		 * 
 		 */
 		String[] cadenas1 = { "alfa", "bravo", "charlie", "delta", "echo" };
 		String[] cadenas2 = cadenas1;
@@ -89,19 +82,15 @@ public class Leccion_3_04 {
 		Arrays.sort(cadenes4);
 		System.out.println(Arrays.toString(cadenes4));
 		/*
-		 * El método binarySearch busca elementos dentro de una array ordenado.
-		 * Si un array no está ordenado, el resultado de la búsqueda será
-		 * impredecible.
+		 * El método binarySearch busca elementos dentro de una array ordenado. Si un array no está ordenado, el resultado de la búsqueda será impredecible.
 		 */
 		int pos = Arrays.binarySearch(cadenes4, "caña");
 		System.out.println(cadenes4[pos]);
 		pos = Arrays.binarySearch(cadenes4, "cava");
 		System.out.println(pos);
 		/*
-		 * Java interpreta los arrays multidimensionales como arrays de arrays.
-		 * Las matrices o arrays bidimensionales pueden ser simétricas de m x n
-		 * elementos, o asimétricas donde cada fila puede tener un número
-		 * diferente de columnas.
+		 * Java interpreta los arrays multidimensionales como arrays de arrays. Las matrices o arrays bidimensionales pueden ser simétricas de m x n elementos, 
+		 * o asimétricas donde cada fila puede tener un número diferente de columnas.
 		 */
 		int[][] matriz1 = new int[3][4];
 		int[][] matriz2 = new int[3][];

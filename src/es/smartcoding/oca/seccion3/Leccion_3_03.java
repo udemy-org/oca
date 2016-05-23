@@ -8,9 +8,9 @@ package es.smartcoding.oca.seccion3;
  * 
  *         La igualdad entre objetos
  * 
- *         En esta lección abordaremos el tema de la igualdad entre objetos. Por
- *         ejemplo, cuándo decimos que dos objetos de tipo ‘Vehiculo’ son
- *         iguales?
+ *         Te ha planteado alguna vez cuándo decimos que dos objetos, por ejemplo, de tipo ‘Vehiculo’ son iguales?
+ *         
+ *         Se consigue sobrescribiendo el metodo equals() de la clase Object. Aunque en el examen OCA no necesitas saber cómo se implementa el método equals.
  *
  *
  */
@@ -20,20 +20,17 @@ public class Leccion_3_03 {
 		StringBuilder one = new StringBuilder("abc");
 		StringBuilder two = new StringBuilder("abc");
 		StringBuilder three = one.append("d");
-		// false
-		System.out.println(one == two);
-		// true
-		System.out.println(one == three);
+		System.out.println("one == two: " + (one == two));
+		System.out.println("one == three: " + (one == three));
 		/*
-		 * La clase StringBuilder NO implementa el método equals, sino que lo hereda de Object con la implementación por defecto, por lo tanto se
-		 * comporta como '=='.
+		 * Lo que sí debes saber es que la clase StringBuilder NO implementa el método equals, sino que lo hereda de Object con la implementación por defecto, 
 		 * 
-		 * La clase String en cambio sí que implementa el método equals (En el
-		 * examen OCA no necesitas saber cómo se implementa el método equals).
+		 * por lo tanto se comporta como '=='.
+		 * 
+		 * La clase String en cambio sí que implementa el método equals.
 		 */
-		// false
-		System.out.println(one.equals(two));
-
+		System.out.println("one.equals(two): " + one.equals(two));
+		System.out.println("one.equals(three): " + one.equals(three));
 	}
 
 }
