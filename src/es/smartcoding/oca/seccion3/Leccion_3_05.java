@@ -13,15 +13,11 @@ import java.util.List;
  * 
  *         La clase ArrayList
  * 
- *         Al crear un array debemos saber cuantos elementos tendrá, pero este no es
- *         siempre el caso. El tamaño de la clase ArrayList igual que la clase
+ *         Al crear un array debemos saber cuantos elementos tendrá, pero este no es siempre el caso. El tamaño de la clase ArrayList igual que la clase
  *         StringBuilder puede cambiar en tiempo de ejecución.
  * 
- *         Recuerda que si durante el examen te muestran un fragmento de código
- *         que no empieza por 1, puedes asumir que todos los imports requeridos
- *         están presentes. De la misma manera, también puedes asumir que todos
- *         los imports están presentes si te muestran un método o un fragmento
- *         de un método.
+ *         Recuerda que si durante el examen te muestran un fragmento de código que no empieza por 1, puedes asumir que todos los imports requeridos
+ *         están presentes. De la misma manera, también puedes asumir que todos los imports están presentes si te muestran un método o un fragmento de un método.
  *
  */
 public class Leccion_3_05 {
@@ -43,15 +39,15 @@ public class Leccion_3_05 {
 		// Desde Java 5, con la introducción de genéricos, podemos especificar el tipo de contenido.
 		ArrayList<String> list4 = new ArrayList<String>();
 
-		// Y desde Java 7, podemos omitir el tipo a la hora de invocar al constructor, puesto que el compilador lo puede inferir. Esto se consigue con el operador diamante (diamond)
+		// Y desde Java 7, podemos omitir el tipo a la hora de invocar al constructor, puesto que el compilador lo puede inferir. 
+		// Esto se consigue con el operador diamante (diamond)
 		ArrayList<String> list5 = new ArrayList<>();
 		
 		// Puesto que la clase ArrayList implementa la interfaz List, esto es totalmente válido.
 		List<String> list6 = new ArrayList<>();
 		
 		/*
-		 * El método add es probablemente el método más utilizado. Como no hemos
-		 * especificado ningún parámetro en el momento de la creación, Java
+		 * El método add es probablemente el método más utilizado. Como no hemos especificado ningún parámetro en el momento de la creación, Java
 		 * asume Object, es decir, cualquier objeto.
 		 */
 		list1.add("Alfa");
@@ -87,9 +83,7 @@ public class Leccion_3_05 {
 		System.out.println(list4);
 
 		/*
-		 * Por otro lado, el método set reemplaza un elemento por otro y lanza
-		 * una excepcion java.lang.IndexOutOfBoundsException si no existe el
-		 * elemento a reemplazar.
+		 * Por otro lado, el método set reemplaza un elemento por otro y lanza una excepcion java.lang.IndexOutOfBoundsException si no existe el elemento a reemplazar.
 		 */
 		list4.set(0, "Zulu");
 		System.out.println(list4);
@@ -131,8 +125,7 @@ public class Leccion_3_05 {
 		System.out.println(list6);
 		System.out.println(list5.equals(list6));
 		/*
-		 * Pero, qué pasa si queremos guardar valores primitivos dentro de una
-		 * lista? Bien, cada tipo primitivo tiene su clase envolvente (Wrapper).
+		 * Pero, qué pasa si queremos guardar valores primitivos dentro de una lista? Bien, cada tipo primitivo tiene su clase envolvente (Wrapper class).
 		 * 
 		 * boolean -> Boolean. new Boolean(true)
 		 * 
@@ -151,8 +144,7 @@ public class Leccion_3_05 {
 		 * char -> Character. new Character('a')
 		 */
 		/*
-		 * Además, cada clase envolvente proporciona un método para pasar de
-		 * String a su tipo primitivo correspondiente:
+		 * Además, cada clase envolvente proporciona un método para pasar de String a su tipo primitivo correspondiente:
 		 * 
 		 * Boolean.parseBoolean("true");
 		 * 
@@ -293,3 +285,13 @@ public class Leccion_3_05 {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+

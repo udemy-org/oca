@@ -40,10 +40,10 @@ public class Leccion_3_04 {
 			System.out.println(numbers3[i]);
 		}
 		
-		// En ocasiones puedes encontrar los corchetes junto a la variable
+		// En ocasiones puedes encontrar los corchetes junto a la variable, en principio, es equivalente.
 		int numbers4[] = { 42, 55, 99 };
 
-		// En el primer ejemplo, a es un array de enteros y b un entero. En el
+		// Pero atención en este ejemplo, a es un array de enteros y b un entero. Mientras que c y d, ambos son arrays de enteros.
 		int a[], b;
 		int[] c, d;
 
@@ -62,6 +62,8 @@ public class Leccion_3_04 {
 		System.out.println("cadenas1 == cadenas2: " + (cadenas1 == cadenas2));
 		System.out.println("cadenas1: " + cadenas1);
 		System.out.println("cadenas2: " + cadenas2);
+		// Considera este ejemplo donde el array de cadenas cadenas3 tiene tres elementos: alfa, bravo y charlie.
+		// Fijate cómo a pesar de asignar null a alfa, bravo y charlie, el array sigue manteniento sus referencias intactas.
 		String alfa = "alfa", bravo = "bravo", charlie = "charlie";
 		String[] cadenas3 = { alfa, bravo, charlie };
 		System.out.println("Arrays.toString(cadenas3): " + Arrays.toString(cadenas3));
@@ -77,7 +79,7 @@ public class Leccion_3_04 {
 		Arrays.sort(cadenes4);
 		System.out.println("Arrays.toString(cadenes4): " + Arrays.toString(cadenes4));
 		
-		// El método binarySearch busca elementos dentro de una array ordenado. Si un array no está ordenado, el resultado de la búsqueda será impredecible.
+		// El método binarySearch busca elementos dentro de una array ordenado, por ejemplo con el método sort() de la clase Arrays. Si un array no está ordenado, el resultado de la búsqueda será impredecible.
 		int pos = Arrays.binarySearch(cadenes4, "caña");
 		System.out.println("cadenes4[pos]: " + cadenes4[pos]);
 		pos = Arrays.binarySearch(cadenes4, "cava");
@@ -117,3 +119,18 @@ public class Leccion_3_04 {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
