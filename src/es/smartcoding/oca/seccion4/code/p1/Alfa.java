@@ -8,7 +8,7 @@ package es.smartcoding.oca.seccion4.code.p1;
  *
  */
 public class Alfa {
-	
+
 	private void f() {
 	}
 
@@ -20,7 +20,10 @@ public class Alfa {
 
 	public void i() {
 	}
-	
+
+	public final void j() {
+	}
+
 	public Alfa() {
 		f();
 		g();

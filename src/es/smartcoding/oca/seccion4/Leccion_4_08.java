@@ -5,7 +5,10 @@ package es.smartcoding.oca.seccion4;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
+import java.util.OptionalInt;
 import java.util.function.Predicate;
 
 /**
@@ -45,8 +48,7 @@ public class Leccion_4_08 {
 	public static void main(String[] args) {
 		Predicate<String> p1 = s -> s.startsWith("A");
 		/*
-		 * Este código define una instancia de Predicate con un expresión lambda
-		 * y es equivalente a este otro.
+		 * Este código define una instancia de Predicate con un expresión lambda y es equivalente a este otro.
 		 */
 		Predicate<String> p2 = new Predicate<String>() {
 
@@ -57,11 +59,11 @@ public class Leccion_4_08 {
 
 		};
 		/*
-		 * Como ves las lambdas son muy compactas y se pueden combinar para
-		 * crear predicados complejos.
+		 * Como ves las lambdas son muy compactas y se pueden combinar para crear predicados complejos.
 		 */
 		Predicate<String> p3 = p1.and(s -> s.endsWith("X")).or(
 				s -> s.contains("M"));
+		// Compara mediante Objects.equal(Object, Object);
 		Predicate<String> p4 = Predicate.isEqual("OCA");
 		Predicate<String> p5 = p4.negate();
 		/*
@@ -74,7 +76,18 @@ public class Leccion_4_08 {
 		lista1 = new ArrayList<String>(lista1);
 		lista1.removeIf(p3);
 		System.out.println(lista1);
-
+		/*
+		 * Aunque estrictamente no forma parte del examen, la clase Objects tiene una serie de métodos static que pueden ser útiles en el día a día.
+		 */
+		String a = "abc ", b = " ABC ";
+		Comparator<String> c = (s1, s2) -> s1.trim().toUpperCase().compareTo(s2.trim().toUpperCase());
+		System.out.println(Objects.compare(a, b, c));
+		System.out.println(Objects.hash(a, b, c));
+		a = Objects.requireNonNull(a);
+		// OptionalInt oi = OptionalInt.of(321);
+		OptionalInt oi = OptionalInt.empty();
+		System.out.println(oi);
+		System.out.println(oi.isPresent() ? oi.getAsInt() : 0);
 	}
 
 }

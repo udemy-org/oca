@@ -27,8 +27,7 @@ package es.smartcoding.oca.seccion4;
  * 
  *         4. Busca un método con argumentos variables, varargs: metodo1(int ... v)
  * 
- *         Como regla general, en toda expresión el tipo con mayor tamaño domina
- *         sobre el resto.
+ *         Como regla general, en toda expresión el tipo con mayor tamaño domina sobre el resto.
  *
  */
 public class Leccion_4_05 {
@@ -69,7 +68,7 @@ public class Leccion_4_05 {
 		System.out.println("varargs");
 	}
 
-	// No compila, método duplicado
+	// No compila, método duplicado, los argumentos variables se considera un array
 	// static void metodo1(int[] v) {
 	//
 	// }

@@ -39,11 +39,10 @@ public class Leccion_4_01 {
 	}
 
 	/*
-	 * Los modificadores de acceso opcionales, aparte de default, son public,
-	 * protected o private.
+	 * Los modificadores de acceso opcionales, aparte de default, son public, protected o private.
 	 */
 	public void m2() {
-
+		return;
 	}
 
 	protected void m3() {
@@ -55,24 +54,32 @@ public class Leccion_4_01 {
 	}
 
 	/*
-	 * Los especificadores opcionales son static, abstract, final, synchronized,
-	 * native y strictfp.
+	 * Los especificadores opcionales son static, abstract, final, synchronized, native y strictfp.
 	 * 
 	 * static, abstract y final se tratan en detalle posteriormente;
 	 * synchronized forma parte del curso OCP (Oracle Certified Programmer) y
 	 * tanto native como strictfp no forman parte ni de uno ni de otro.
 	 * 
-	 * Los modificadores de acceso opcionales y los especificadores opcionales
-	 * pueden intercambiarse pero no es una práctica recomendable.
+	 */
+	
+	/*
+	 * Un método static significa que es un miembro de clase, no se necesita una instancia de la clase para invocarlo.
 	 */
 	public static void m5() {
 
 	}
 
+	/*
+	 * Un método final significa que las subclases no puede sobrescribirlo
+	 */
 	public final void m6() {
 
 	}
 
+	/*
+	 * Los modificadores de acceso opcionales y los especificadores opcionales
+	 * pueden intercambiarse pero no es una práctica recomendable.
+	 */
 	public static final void m7() {
 
 	}
@@ -110,17 +117,19 @@ public class Leccion_4_01 {
 		return;
 	}
 
+	/*
+	 * Aunque es posible, no uses nombres como este para declarar ni tus métodos ni tus variable.
+	 */
 	void $() {
 
 	}
 
 	/*
-	 * La lista de parámetros separados por comas es opcional. Pero los
-	 * paréntesis siempre tienen que estar presentes.
+	 * La lista de parámetros separados por comas es opcional. Pero los paréntesis siempre tienen que estar presentes.
 	 */
 
 	void m15(int a, double b) {
-
+		System.out.println("en m15(int, double)");
 	}
 
 	/*
@@ -134,7 +143,9 @@ public class Leccion_4_01 {
 	}
 
 	public static void main(String[] args) {
-
+		// Así se invoca un método de instancia
+		Leccion_4_01 l = new Leccion_4_01();
+		l.m15(1, 1.0);
 	}
 
 }
