@@ -12,11 +12,9 @@ import es.smartcoding.oca.seccion4.code.p1.Alfa;
  * 
  *         Los miembros private sólo son accesibles desde la propia clase.
  * 
- *         Los miembros default son accesibles desde la propia clase y desde el
- *         mismo paquete.
+ *         Los miembros default son accesibles desde la propia clase y desde el mismo paquete.
  * 
- *         Los miembros protected son accesibles desde la propia clase, desde el
- *         mismo paquete y desde las subclases.
+ *         Los miembros protected son accesibles desde la propia clase, desde el mismo paquete y desde las subclases.
  * 
  *         Los miembros public son accesibles desde cualquier parte.
  *

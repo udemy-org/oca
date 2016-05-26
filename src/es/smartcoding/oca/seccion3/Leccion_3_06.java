@@ -31,23 +31,30 @@ import java.util.GregorianCalendar;
 public class Leccion_3_06 {
 
 	public static void main(String[] args) {
-		
+
+		for (int i = 0; i < 10;) {
+			i = i++;
+			System.out.println("xxx" + i);
+		}
+
 		/*
-		 * La clase java.time.LocalDate contiene sólo una fecha, con formato ISO-8601 como 2010-08-31
+		 * La clase java.time.LocalDate contiene sólo una fecha, con formato
+		 * ISO-8601 como 2010-08-31
 		 * 
 		 * La clase java.time.LocalTime contiene sólo una hora.
 		 * 
 		 * La clase java.time.LocalDateTime contiene una fecha y una hora.
 		 * 
-		 * No se usan los constructores para crear nuevas instancias sino los métodos estáticos of() y now().
-		 * 
+		 * No se usan los constructores para crear nuevas instancias sino los
+		 * métodos estáticos of() y now().
 		 */
 		System.out.println("LocalDate.now(): " + LocalDate.now());
 		System.out.println("LocalTime.now(): " + LocalTime.now());
 		System.out.println("LocalDateTime.now(): " + LocalDateTime.now());
 
 		/*
-		 * Estas dos fechas son equivalentes. Si bien el tipo enumerado Month no forma parte del examen OCA.
+		 * Estas dos fechas son equivalentes. Si bien el tipo enumerado Month no
+		 * forma parte del examen OCA.
 		 */
 		LocalDate fecha1 = LocalDate.of(2015, 1, 20);
 		LocalDate fecha3 = LocalDate.of(2015, Month.JANUARY, 20);
@@ -64,12 +71,15 @@ public class Leccion_3_06 {
 		LocalTime hora2 = LocalTime.of(6, 15, 30);
 		LocalTime hora3 = LocalTime.of(6, 15, 30, 200);
 
-		// También se puede combinar la fecha y la hora en un mismo objeto. SIEMPRE a través de métodos estáticos.
-		LocalDateTime fechaHora1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6, 15, 30);
+		// También se puede combinar la fecha y la hora en un mismo objeto.
+		// SIEMPRE a través de métodos estáticos.
+		LocalDateTime fechaHora1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6,
+				15, 30);
 		LocalDateTime fechaHora2 = LocalDateTime.of(fecha1, hora1);
-		
+
 		/*
-		 * En versiones anteriores a Java 8, usábamos las clases Date y  Calendar.
+		 * En versiones anteriores a Java 8, usábamos las clases Date y
+		 * Calendar.
 		 * 
 		 * Actualmente, la mayoria de constructores de la clase Date no están recomendados (deprecated), y los meses empiezan en 0 lo que añade confusión.
 		 */
@@ -83,7 +93,7 @@ public class Leccion_3_06 {
 		Calendar calendar2 = new GregorianCalendar(2016, Calendar.APRIL, 21);
 		Date date3 = calendar2.getTime();
 		// Date date4 = new Date(2015, Calendar.JANUARY, 12); // Deprecated
-		
+
 		// Manipular fechas con las nuevas clases de Java 8 es fácil.
 		LocalDate date5 = LocalDate.of(2014, Month.JANUARY, 20);
 		// 2014-01-20
@@ -105,11 +115,12 @@ public class Leccion_3_06 {
 		System.out.println("date5 minus 3 days: " + date5);
 		date5 = date5.minus(1, ChronoUnit.YEARS);
 		System.out.println("date5 minus 1 year: " + date5);
-		// La clase LocalDate es inmutable, por lo tanto cuidado! este código no tiene ningún efecto:
+		// La clase LocalDate es inmutable, por lo tanto cuidado! este código no
+		// tiene ningún efecto:
 		date5.minusDays(1);
 		System.out.println("date5 minus 1 day: " + date5);
 		
-		// En Java 8 Java define la clase Period. Hay cinco maneras de definir un período:
+		// En Java 8 Java define la clase Period. Hay cinco maneras de definir un período
 		// Estos son algunos ejemplos de periodos (años, meses y días): Cada año
 		Period period1 = Period.ofYears(1);
 		System.out.println("period1: " + period1);
@@ -133,7 +144,8 @@ public class Leccion_3_06 {
 		/*
 		 * Si bien un período comprende un día o más, las instancias de la clase Duration pueden contener el número de días, horas, minutos, segundos y nanosegundos.
 		 * 
-		 * Ni Duration ni Instant (un instante) están presentes en el examen pero te puede ser útil en tu día a día.
+		 * Ni Duration ni Instant (un instante) están presentes en el examen
+		 * pero te puede ser útil en tu día a día.
 		 */
 		Duration duration1 = Duration.of(10, ChronoUnit.MINUTES);
 		System.out.println("duration1: " + duration1);
@@ -145,28 +157,34 @@ public class Leccion_3_06 {
 		LocalDate date = LocalDate.of(2020, Month.JANUARY, 20);
 		LocalTime time = LocalTime.of(11, 12, 34);
 		LocalDateTime dateTime = LocalDateTime.of(date, time);
-		System.out.println("format date: " + date.format(DateTimeFormatter.ISO_LOCAL_DATE));
-		System.out.println("format time: " + time.format(DateTimeFormatter.ISO_LOCAL_TIME));
-		System.out.println("format datetime: " + dateTime
-				.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+		System.out.println("format date: "
+				+ date.format(DateTimeFormatter.ISO_LOCAL_DATE));
+		System.out.println("format time: "
+				+ time.format(DateTimeFormatter.ISO_LOCAL_TIME));
+		System.out.println("format datetime: "
+				+ dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
 		/*
 		 * La clase DateTimeFormatter de Java 8 viene a ser como la clase SimpleDateFormat de Java 7.
 		 */
 		DateTimeFormatter shortDateTime = DateTimeFormatter
 				.ofLocalizedDate(FormatStyle.SHORT);
 		// 1/20/20
-		System.out.println("dateTime short date time format 1: " + shortDateTime.format(dateTime));
+		System.out.println("dateTime short date time format 1: "
+				+ shortDateTime.format(dateTime));
 		// 1/20/20
-		System.out.println("date short date time format 1: " + shortDateTime.format(date));
+		System.out.println("date short date time format 1: "
+				+ shortDateTime.format(date));
 		// UnsupportedTemporalTypeException
 		// System.out.println(shortDateTime.format(time));
 		/*
 		 * Este código es equivalente al anterior. Se puede utilizar uno u otro indistintamente.
 		 */
-		System.out.println("date short date time format 2: " + date.format(shortDateTime));
+		System.out.println("date short date time format 2: "
+				+ date.format(shortDateTime));
 		// UnsupportedTemporalTypeException
 		// System.out.println(time.format(shortDateTime));
-		System.out.println("dateTime short date time format 2: " + dateTime.format(shortDateTime));
+		System.out.println("dateTime short date time format 2: "
+				+ dateTime.format(shortDateTime));
 		/*
 		 * Si por algún motivo no queremos utilizar los formatos predeterminados (SHORT, MEDIUM, LONG o FULL), podemos crear nuestros propios formatos
 		 * con los siguientes códigos:
@@ -184,11 +202,14 @@ public class Leccion_3_06 {
 		 */
 		DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter
 				.ofPattern("MMMM dd, yyyy, hh:mm");
-		System.out.println("dateTime dateTimeFormatter1: " + dateTime.format(dateTimeFormatter1));
+		System.out.println("dateTime dateTimeFormatter1: "
+				+ dateTime.format(dateTimeFormatter1));
 		/*
-		 * Por último, nos queda por tratar el tema de la conversión de una cadena en un objeto fecha.
+		 * Por último, nos queda por tratar el tema de la conversión de una
+		 * cadena en un objeto fecha.
 		 * 
-		 * Tanto la clase LocalDate, LocalTime como LocalDateTime proporcionan un método estático, parse, que puede transformar una cadena en fecha.
+		 * Tanto la clase LocalDate, LocalTime como LocalDateTime proporcionan
+		 * un método estático, parse, que puede transformar una cadena en fecha.
 		 */
 		DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter
 				.ofPattern("MM dd yyyy");
