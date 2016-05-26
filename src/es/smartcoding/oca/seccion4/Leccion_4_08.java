@@ -3,6 +3,8 @@
  */
 package es.smartcoding.oca.seccion4;
 
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -46,6 +48,12 @@ import java.util.function.Predicate;
 public class Leccion_4_08 {
 
 	public static void main(String[] args) {
+		
+//		LocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
+//		System.out.println(d);
+//		Period p = Period.ofDays(1).ofYears(2);
+//		System.out.println(p);
+		
 		Predicate<String> p1 = s -> s.startsWith("A");
 		/*
 		 * Este código define una instancia de Predicate con un expresión lambda y es equivalente a este otro.
