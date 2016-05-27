@@ -18,8 +18,7 @@ import java.util.List;
  * 
  *         3. Un tipo de retorno obligatorio.
  * 
- *         4. Un nombre de método obligatorio (que sigue las reglas de
- *         construcción de cualquier otro identificador).
+ *         4. Un nombre de método obligatorio (que sigue las reglas de construcción de cualquier otro identificador).
  * 
  *         5. Una lista de parámetros entre parentesis que puede ser vacia.
  * 
@@ -30,9 +29,8 @@ import java.util.List;
  */
 public class Leccion_4_01 {
 
-	/*
-	 * Este es un ejemplo de definición de método sólo con los elementos
-	 * obligatorios. Como no tiene ningún modificador de acceso decimos que su
+	/**********
+	 * Este es un ejemplo de definición de método sólo con los elementos  obligatorios. Como no tiene ningún modificador de acceso decimos que su
 	 * modificador de acceso es default (por defecto).
 	 */
 	void m1() {
@@ -53,12 +51,11 @@ public class Leccion_4_01 {
 
 	}
 
-	/*
+	/**********
 	 * Los especificadores opcionales son static, abstract, final, synchronized, native y strictfp.
 	 * 
-	 * static, abstract y final se tratan en detalle posteriormente;
-	 * synchronized forma parte del curso OCP (Oracle Certified Programmer) y
-	 * tanto native como strictfp no forman parte ni de uno ni de otro.
+	 * static, abstract y final se tratan en detalle posteriormente; 
+	 * synchronized forma parte del curso OCP (Oracle Certified Programmer) y tanto native como strictfp no forman parte ni de uno ni de otro.
 	 * 
 	 */
 	
@@ -70,15 +67,14 @@ public class Leccion_4_01 {
 	}
 
 	/*
-	 * Un método final significa que las subclases no puede sobrescribirlo
+	 * Un método final significa que las subclases no puede sobrescribirlo pero sobrecargarlo sí.
 	 */
 	public final void m6() {
 
 	}
 
 	/*
-	 * Los modificadores de acceso opcionales y los especificadores opcionales
-	 * pueden intercambiarse pero no es una práctica recomendable.
+	 * Los modificadores de acceso opcionales y los especificadores opcionales pueden intercambiarse pero no es una práctica recomendable.
 	 */
 	public static final void m7() {
 
@@ -88,9 +84,8 @@ public class Leccion_4_01 {
 
 	}
 
-	/*
-	 * En Java un método puede retornar cualquier tipo, ya sea primitivo o
-	 * referencia a objeto o void si no retorna nada.
+	/**********
+	 * En Java un método puede retornar cualquier tipo, ya sea primitivo o referencia a objeto o void si no retorna nada. Y aunque no retorne nada, puede haber un return.
 	 */
 
 	String m9() {
@@ -117,8 +112,8 @@ public class Leccion_4_01 {
 		return;
 	}
 
-	/*
-	 * Aunque es posible, no uses nombres como este para declarar ni tus métodos ni tus variable.
+	/**********
+	 * Por ultimo, un consejo, aunque es posible, no uses nombres como este para declarar ni tus métodos ni tus variables o clases, identificadores en general.
 	 */
 	void $() {
 
@@ -133,8 +128,7 @@ public class Leccion_4_01 {
 	}
 
 	/*
-	 * A veces, preveemos que un método puede lanzar una o más excepciones. En
-	 * estos casos, podemos declarar un lista separada por comas de excepciones
+	 * A veces, preveemos que un método puede lanzar una o más excepciones. En estos casos, podemos declarar un lista separada por comas de excepciones
 	 * precedida por la palabra clave throws.
 	 */
 
@@ -149,3 +143,15 @@ public class Leccion_4_01 {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,25 +12,31 @@ package es.smartcoding.oca.seccion4;
  *
  */
 public class Leccion_4_02 {
-
-	/*
-	 * Internamente el parametro a es una array de enteros int[]
-	 */
-	static void m1(int... a) {
-		System.out.println("en m1(int...): " + a.length);
-	}
 	
 	/*
 	 * No compila
 	 */
-	//void m2(String ...args, int i) {}
+	// void m2(String ...args, int i) {}
+
+	/*
+	 * Internamente este parámetro variable es una array de enteros int[]
+	 */
+	static void m1(int i, int... a) {
+		System.out.println("en m1(int...): " + a.length);
+	}
 
 	public static void main(String... args) {
 		/*
-		 * Un método con Varargs se puede invocar mediante una secuencia separada por comas de argumentos o mediante un array.
+		 * Un método con parámetros variables se puede invocar mediante una secuencia separada por comas de argumentos o mediante un array. Aunque no es estrictamente igual.
 		 */
 		m1(1, 2, 3);
-		m1(new int[] { 1, 2, 3 });
+		//m1(new int[] { 1, 2, 3 });
 	}
 
 }
+
+
+
+
+
+
