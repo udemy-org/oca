@@ -21,6 +21,16 @@ import es.smartcoding.oca.seccion4.code.p1.Alfa;
  * 
  */
 public class Leccion_4_03_A {
+	
+	/*
+	 * Esta es una de las partes más duras del examen. Asegurate de que la trabajas a fondo, revisando estos ejemplos hasta que los entiendas
+	 * completamente, respondiendo corectamente a las preguntas de los tests y haciendos tus propios ejemplos.
+	 * 
+	 * Es esta lección vamos a usar las clases Alfa y Bravo declaradas en este paquete: es.smartcoding.oca.seccion4.code.p1 
+	 * y la clase Charlie que extiende Alfa declarada en este paquete es.smartcoding.oca.seccion4.code.p2.
+	 * 
+	 * También vamos a ilustrar el tema de los miembros estáticos con dos clases: la clase DemoStatic y DemoStaticInit.
+	 */
 
 	public static void main(String[] args) {
 		Alfa alfa = new Alfa();
@@ -45,11 +55,10 @@ public class Leccion_4_03_A {
 
 	}
 
-	/*
-	 * Esta es una de las partes más duras del examen. Asegurate de que la
-	 * trabajas a fondo, revisando estos ejemplos hasta que los entiendas
-	 * completamente, respondiendo corectamente a las preguntas de los tests y
-	 * haciendos tus propios ejemplos.
-	 */
 
 }
+
+
+
+
+

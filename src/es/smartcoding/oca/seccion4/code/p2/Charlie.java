@@ -17,13 +17,11 @@ public class Charlie extends Alfa {
 		 */
 		// f(); // No compila
 		/*
-		 * default, sólo es accesible desde la propia clase y el paquete donde
-		 * está definida.
+		 * default, sólo es accesible desde la propia clase y el paquete donde está definida.
 		 */
 		// g(); // No compila
 		/*
-		 * protected, sólo es accesible desde la propia clase, el paquete donde
-		 * está definida y subclases.
+		 * protected, sólo es accesible desde la propia clase, el paquete donde está definida y subclases.
 		 */
 		h();
 		/*
@@ -32,8 +30,7 @@ public class Charlie extends Alfa {
 		i();
 
 		/*
-		 * Sin embargo, aunque estemos en una subclase de Alfa, una instancia de
-		 * Alfa no tiene acceso a los miembros default, ni protected ni private.
+		 * Sin embargo, aunque estemos en una subclase de Alfa, una instancia de Alfa no tiene acceso a los miembros default, ni protected ni private.
 		 */
 
 		Alfa alfa1 = new Alfa();
@@ -44,8 +41,7 @@ public class Charlie extends Alfa {
 		alfa1.i();
 
 		/*
-		 * Lo mismo pasa con una variable de tipo Alfa que hace referencia a un
-		 * objeto de tipo Charlie: sólo puede acceder a sus miembro públicos.
+		 * Lo mismo pasa con una variable de tipo Alfa que hace referencia a un objeto de tipo Charlie: sólo puede acceder a sus miembro públicos.
 		 */
 
 		Alfa alfa2 = new Charlie();
@@ -56,8 +52,7 @@ public class Charlie extends Alfa {
 		alfa2.i();
 
 		/*
-		 * Como era de esperar, una instancia de Charlie que es subclase de
-		 * Alfa, sí tiene accesos a los miembros protected y public de Alfa.
+		 * Lo mismo ocurre en la clase Charlie, pero como era de esperar, una instancia de Charlie que es subclase de Alfa, sí tiene accesos a los miembros protected y public de Alfa.
 		 */
 
 		Charlie charlie = new Charlie();
@@ -70,8 +65,17 @@ public class Charlie extends Alfa {
 	}
 	
 	/*
-	 * Una subclase no puede sobrescribir un método final, pero sí sobrecargarlo.
+	 * Por último, una subclase no puede sobrescribir un método final, pero sí sobrecargarlo.
 	 */
 	public void j(int i) {}
 
 }
+
+
+
+
+
+
+
+
+

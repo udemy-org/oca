@@ -18,13 +18,11 @@ public class Bravo {
 		 */
 		// alfa.f(); // No compila
 		/*
-		 * default, sólo es accesible desde la propia clase y el paquete donde
-		 * está definida.
+		 * default, sólo es accesible desde la propia clase y el paquete donde está definida.
 		 */
 		alfa.g();
 		/*
-		 * protected, sólo es accesible desde la propia clase, el paquete donde
-		 * está definida y subclases.
+		 * protected, sólo es accesible desde la propia clase, el paquete donde está definida y subclases.
 		 */
 		alfa.h();
 		/*
@@ -35,3 +33,8 @@ public class Bravo {
 	}
 
 }
+
+
+
+
+

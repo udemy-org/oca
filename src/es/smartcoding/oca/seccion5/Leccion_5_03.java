@@ -8,20 +8,14 @@ package es.smartcoding.oca.seccion5;
  * 
  *         La implementación de interfaces
  * 
- *         Aunque Java no permite la herencia múltiple, sí que permite a una
- *         clase implementar cualquier número de interfaces.
+ *         Aunque Java no permite la herencia múltiple, sí que permite a una clase implementar cualquier número de interfaces.
  * 
- *         Una interfaz es una estructura de datos abstracta que define una
- *         lista de cero o más métodos públicos y abstractos que cualquier clase
- *         concreta debe implementar.
+ *         Una interfaz es una estructura de datos abstracta que define una lista de cero o más métodos públicos y abstractos que cualquier clase concreta debe implementar.
  * 
- *         Una interfaz es abstract implícitamente y también puede contener una
- *         lista de cero o más constantes public, final y static, y Java 8
- *         introduce los métodos por defecto (default methods), con cuerpo y
- *         métodos estáticos.
+ *         Una interfaz es abstract implícitamente y también puede contener una lista de cero o más constantes public, final y static, y Java 8
+ *         introduce los métodos por defecto (default methods), con cuerpo y métodos estáticos.
  * 
- *         Las reglas para definir una interfaz son muy parecidas a las reglas
- *         de las clases abstractas:
+ *         Las reglas para definir una interfaz son muy parecidas a las reglas de las clases abstractas:
  * 
  *         1. Una interfaz no puede instanciarse directamente.
  * 
@@ -29,20 +23,14 @@ package es.smartcoding.oca.seccion5;
  * 
  *         3. Una interfaz no puede ser final.
  * 
- *         4. Las interfaces definidas a alto nivel (en su propio fichero)
- *         pueden ser public o default y se asume abstract.
+ *         4. Las interfaces definidas a alto nivel (en su propio fichero) pueden ser public o default y se asume abstract.
  * 
- *         5. Implícitdamente, todos los métodos de una interfaz son abtract y
- *         public, por lo tanto un método no puede ser private, protected ni
- *         final.
+ *         5. Implícitamente, todos los métodos de una interfaz son abtract y public, por lo tanto un método no puede ser private, protected ni final.
  * 
- *         Importante, ni las clases ni las interfaces internas forman parte de
- *         los objetivos del examen OCA.
+ *         Importante, ni las clases ni las interfaces internas forman parte de los objetivos del examen OCA.
  * 
- *         Puedes encontrarte con un escenario donde una clase implementa dos
- *         interfaces que definen el mismo método por defecto. Este es un caso
- *         particular y sólo compilará si la clase concreta implementa el método
- *         por defecto, lo que elimina la ambiguedad. Además, los métodos
+ *         Puedes encontrarte con un escenario donde una clase implementa dos interfaces que definen el mismo método por defecto. Este es un caso
+ *         particular y sólo compilará si la clase concreta implementa el método por defecto, lo que elimina la ambiguedad. Además, los métodos
  *         estáticos de una interfaz no se heredan.
  * 
  * 
@@ -62,11 +50,9 @@ abstract interface Vehiculo {
 	void gira();
 
 	/*
-	 * Los métodos default permiten añadir métodos a interfaces (sólo a
-	 * interfaces) sin romper la compatibilidad con el código antiguo.
+	 * Los métodos default permiten añadir métodos a interfaces (sólo a interfaces) sin romper la compatibilidad con el código antiguo.
 	 * 
-	 * Imagina que quieres añadir uno o más métodos a una interfaz que está
-	 * implementada por múltiples clases sin que se rompa el código. La solución
+	 * Imagina que quieres añadir uno o más métodos a una interfaz que está implementada por múltiples clases sin que se rompa el código. La solución
 	 * es añadir métodos por defecto que ya tienen una implementación.
 	 * 
 	 * Los métodos por defectos no pueden ser ni abstract ni final ni static.
@@ -78,8 +64,7 @@ abstract interface Vehiculo {
 
 abstract class Utilitario implements Vehiculo {
 	/*
-	 * Una clase abstracta o interfaz puede redefinir un método por defecto como
-	 * abstracto. A partir de este momento, las subclases deben proporcionar una
+	 * Una clase abstracta o interfaz puede redefinir un método por defecto como abstracto. A partir de este momento, las subclases deben proporcionar una
 	 * implementación para dicho método.
 	 */
 	public abstract void frena();
@@ -125,11 +110,16 @@ interface MiInterfaz2 {
 	}
 }
 
+/*
+ * La clase MiClase implementa las interfaces MiInterfaz1 y MiInterfaz2. Ambas definen un método statico g() y un método default f(). Por lo tanto está obligada a 
+ * definir su propia versión del método default f() para eliminar la ambiguedad. De la misma forma recuerda que los métodos estáticos no se heredan por lo tanto
+ * la invocación de g() no compila y tampoco compilaría si el método estatico g() estuviera presente sólo en una interfaz.
+ */
 class MiClase implements MiInterfaz1, MiInterfaz2 {
 	public void f() {
 		MiInterfaz1.g();
 		MiInterfaz2.g();
-		// g(); // No compila
+		//g(); // No compila
 	}
 }
 
@@ -146,3 +136,12 @@ public class Leccion_5_03 {
 	}
 
 }
+
+
+
+
+
+
+
+
+

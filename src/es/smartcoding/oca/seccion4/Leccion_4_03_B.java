@@ -21,40 +21,28 @@ import static java.util.Arrays.*;
 /**
  * @author pep
  * 
- *         Para acceder a los miembros (propiedades y métodos) estáticos de una
- *         clase no se requiere una instancia. Por eso se llaman miembros de
+ *         Para acceder a los miembros (propiedades y métodos) estáticos de una clase no se requiere una instancia. Por eso se llaman miembros de
  *         clase, en oposición a los miembros de instancia.
  * 
- *         Todos los miembros estáticos son compartidos entre todos los usuarios
- *         de la clase, como si existieran independientemente de cualquier
+ *         Todos los miembros estáticos son compartidos entre todos los usuarios de la clase, como si existieran independientemente de cualquier
  *         instancia de la clase.
  * 
- *         Cada instancia de una clase tiene una cópia de las variables de
- *         instancia (no static) pero sólo hay una copia de las variables de
- *         clase (static) que es compartida por todas las instancias de la
- *         clase. En cuanto a los métodos, tanto de instancia como de clase
- *         sólamente hay una copia a efectos de eficiencia, y los parámetros y
- *         variables locales se sitúan en la pila.
+ *         Cada instancia de una clase tiene una cópia de las variables de instancia (no static) pero sólo hay una copia de las variables de
+ *         clase (static) que es compartida por todas las instancias de la clase. En cuanto a los métodos, tanto de instancia como de clase
+ *         sólamente hay una copia a efectos de eficiencia, y los parámetros y variables locales se sitúan en la pila.
  * 
- *         El método main, que hemos usado ampliamente, es público y estático
- *         con el objetivo de que sea accesible desde cualquier parte y que el
- *         cargador de clases no necesite crear una instancia de la clase para
- *         invocarlo.
+ *         El método main, que hemos usado ampliamente, es público y estático con el objetivo de que sea accesible desde cualquier parte y que el
+ *         cargador de clases no necesite crear una instancia de la clase para invocarlo.
  * 
- *         Aparte del método main, declaramos miembros estáticos en varios
- *         escenarios:
+ *         Aparte del método main, declaramos miembros estáticos en varios escenarios:
  * 
- *         1. Cuando queremos definir métodos de utilidad, como hace la clase
- *         Math.
+ *         1. Cuando queremos definir métodos de utilidad, como hace la clase Math.
  * 
- *         2. Cuando queremmos definir estado que sea compartido por todas las
- *         instancias de una clase. Por ejemplo, el número de instancias que
- *         tiene un clase.
+ *         2. Cuando queremos definir estado que sea compartido por todas las instancias de una clase. Por ejemplo, el número de instancias que tiene un clase.
  * 
- *         Y RECUERDA, LOS METODOS ESTÁTICOS SÓLO PUEDEN ACCEDER A OTROS
- *         MIEMBROS ESTÁTICOS. EN CAMBIO, LOS MÉTODOS DE INSTANCIA (NO
- *         ESTÁTICOS) PUEDEN ACCERDER TANTO A MIEMBROS DE CLASE (ESTÁTICOS) COMO
- *         DE INSTANCIA (NO ESTÁTICOS).
+ *         Y RECUERDA, LOS METODOS ESTÁTICOS SÓLO PUEDEN ACCEDER A OTROS MIEMBROS ESTÁTICOS. EN CAMBIO, LOS MÉTODOS DE INSTANCIA (NO ESTÁTICOS) 
+ *         PUEDEN ACCERDER TANTO A MIEMBROS DE CLASE (ESTÁTICOS) COMO DE INSTANCIA (NO ESTÁTICOS).
+ *         
  */
 
 class DemoStatic {
@@ -66,7 +54,7 @@ class DemoStatic {
 	}
 
 	public static void m1() {
-		// System.out.println(i); // No compila
+		// System.out.println(i); // No compila, un miembro static no puede acceder a miembros de instancia.
 		System.out.println(count);
 	}
 
@@ -78,23 +66,19 @@ class DemoStatic {
 
 class DemoStaticInit {
 	/*
-	 * Las constantes estáticas o bien se inicializan cuando se declaran o bien
-	 * en un bloque estático (sólo una vez), de otra forma se genera un error de
-	 * compilación.
+	 * En cuanto a las constantes estáticas o bien se inicializan cuando se declaran o bien en un bloque estático (sólo una vez), de otra forma se genera un error de compilación.
 	 */
 	private static final int MAX_ELEM;
 	private static final int CONST1 = 0;
 	// private static final int CONST2; // No compila, no está inicializada
 	/*
-	 * Los bloques de inicialización estáticos se ejecutan cuando la clase se
-	 * usa por primera vez.
+	 * Los bloques de inicialización estáticos se ejecutan cuando la clase se usa por primera vez.
 	 * 
-	 * Cuando se crea una instancia de esta clase, primero se ejecuta el código
-	 * de los bloques estáticos (en orden) y después el código de los bloques de
-	 * instancia.
+	 * Cuando se crea una instancia de esta clase, primero se ejecuta el código de los bloques estáticos (en orden de aparición) y después el código de los bloques de instancia
+	 * (tambien en orden).
 	 * 
-	 * De todas formas, se recomienda no utilizar bloques de inicialización de
-	 * instancia y trasladar ese código al constructor.
+	 * De todas formas, se recomienda no utilizar bloques de inicialización de instancia y trasladar ese código al constructor.
+	 * 
 	 */
 	static {
 		System.out.println("En bloque estático");
@@ -135,28 +119,40 @@ public class Leccion_4_03_B {
 		 */
 		ds1.m1();
 		/*
-		 * Como invocamos un método estático, sólamente el bloque estático se
-		 * ejecuta, pero sólo una vez.
+		 * Como invocamos un método estático, sólamente el bloque estático se ejecuta, pero sólo una vez.
 		 */
 		DemoStaticInit.m1();
 		DemoStaticInit.m1();
 		/*
-		 * En este caso creamos una instancia de la clase DemoStaticInit, por lo
-		 * tanto, si no se ha ejecutado ya, se invoca el código de
-		 * inicialización estático primero y después el código de inicialización
-		 * de instancia.
+		 * En este caso creamos una instancia de la clase DemoStaticInit, por lo tanto, si no se ha ejecutado ya, 
+		 * se invoca el código de inicialización estático primero y después el código de inicialización de instancia.
 		 */
 		DemoStaticInit dsi = new DemoStaticInit();
 		/*
-		 * Finalmente, así como los imports normales importan clases, los
-		 * imports estáticos importan miembros estáticos de clases concretas.
+		 * En cuanto a las ordenes import, recuerda, así como los imports normales importan clases, los imports estáticos importan miembros estáticos (como métodos) de clases concretas.
 		 */
 		List<String> list1 = asList("alfa", "bravo");
 		/*
-		 * Fíjate bien que el import estático importa el método asList y no la
-		 * clase Arrays.
+		 * Fíjate bien que el import estático importa el método asList y no la clase Arrays.
 		 */
 		// List<String> list2 = Arrays.asList("alfa", "bravo"); // No compila
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
