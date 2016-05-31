@@ -8,24 +8,17 @@ package es.smartcoding.oca.seccion6;
  * 
  *         La orden try
  * 
- *         Java utiliza la orden try para separar el código que puede lanzar una
- *         excepción del código que trata la excepción.
+ *         Java utiliza la orden try para separar el código que puede lanzar una excepción del código que trata la excepción.
  * 
- *         El código de un bloque try se ejecuta normalmente y si alguna orden
- *         lanza un excepción entonces el o los bloques catch toman el control.
- *         Pero si el bloque try se ejecuta normalmente, entonces el o los
- *         bloques catch se ignoran.
+ *         El código de un bloque try se ejecuta normalmente y si alguna orden lanza un excepción entonces el o los bloques catch toman el control.
+ *         Pero si el bloque try se ejecuta normalmente, entonces el o los bloques catch se ignoran.
  * 
- *         El bloque opcional finally, en cambio, se ejecuta siempre y viene a
- *         continuación del último bloque catch. Aunque hay una excepción a la
- *         regla, cuando se ejecuta la orden System.exit() el flujo normal del
- *         programa acaba abruptamente.
+ *         El bloque opcional finally, en cambio, se ejecuta siempre y viene a continuación del último bloque catch. Aunque hay una excepción a la
+ *         regla, cuando se ejecuta la orden System.exit() el flujo normal del programa acaba abruptamente.
  * 
- *         Un bloque try necesariamente debe ir seguido de una bloque catch o
- *         finally o ambos.
+ *         Un bloque try necesariamente debe ir seguido de una bloque catch o finally o ambos.
  * 
- *         En el examen OCP se trata el try-with-resources pero el examen OCA
- *         solamente trata la orden try tradicional.
+ *         En el examen OCP se trata el try-with-resources pero el examen OCA solamente trata la orden try tradicional.
  *
  */
 public class Leccion_6_02 {
@@ -40,8 +33,7 @@ public class Leccion_6_02 {
 			// System.exit(0);
 		}
 		/*
-		 * No compila, el orden es importante, los bloques catch deben
-		 * especificar clases de menos a más generales
+		 * No compila, el orden es importante, los bloques catch deben especificar clases de más concretas a más generales
 		 */
 		// catch (Exception e) {
 		//
@@ -90,6 +82,9 @@ public class Leccion_6_02 {
 			}
 		} catch (Exception e) {
 			result += " done";
+		}
+		finally {
+			result += " bye bye.";
 		}
 		return result;
 	}
