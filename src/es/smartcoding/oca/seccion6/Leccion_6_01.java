@@ -26,11 +26,11 @@ package es.smartcoding.oca.seccion6;
  *         Las excepciones comprobadas (checked exceptions) están encapsuladas en la clase java.lang.Exception y subclases excepto la clase y
  *         subclases de java.lang.RuntimeException que también hereda de java.lang.Exception.
  * 
- *         Aunque todas las exceptiones ocurren en tiempo de ejecución, cuando hablamos de excepciones en tiempo de ejecución nos referimos a las
+ *         Aunque todas las exceptiones ocurren en tiempo de ejecución, cuando hablamos de excepciones en tiempo de ejecución (Runtime) nos referimos a las
  *         excepciones no comprobadas (unchecked exceptions).
  * 
  *         Esta distinción entre comprobadas (checked) y no comprobadas (unchecked) es básica porque Java requiere que las primeras, las
- *         comprobadas, sean gestionadas según la regla 'handle o declare', es decir, 'trata o declara'.
+ *         comprobadas, sean gestionadas según la regla 'handle or declare', es decir, 'trata o declara'.
  * 
  *         Aunque el debate está servido sobre si las excepciones que lanzan los métodos deben se comprobadas o no, en el examen es muy improbable que
  *         te encuentres preguntas filosóficas de este tipo.
@@ -39,9 +39,6 @@ package es.smartcoding.oca.seccion6;
  */
 public class Leccion_6_01 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		/*
 		 * Esta simple línea de código compila pero lanza una excepción no comprobada: java.lang.NegativeArraySizeException.
@@ -57,8 +54,7 @@ public class Leccion_6_01 {
 		 */
 		// throw new RuntimeException();
 		/*
-		 * Esta línea en cambio, no compila. Porque Exception es una excepción comprobada que el código debe gestionar según la regla 'handle or
-		 * declare'.
+		 * Esta línea en cambio, no compila. Porque Exception es una excepción comprobada que el código debe gestionar según la regla 'handle or declare'.
 		 */
 		// throw new Exception();
 		/*
@@ -68,5 +64,13 @@ public class Leccion_6_01 {
 
 	}
 	
-
 }
+
+
+
+
+
+
+
+
+
