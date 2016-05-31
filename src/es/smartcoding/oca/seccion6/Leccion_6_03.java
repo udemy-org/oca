@@ -8,12 +8,10 @@ package es.smartcoding.oca.seccion6;
  * 
  *         Tipos de excepciones comunes
  * 
- *         El examen OCA cuestionará tu conocimiento sobre tres tipos de
- *         excepciones: excepciones no comprobadas o excepciones en tiempo de
+ *         El examen OCA cuestionará tu conocimiento sobre tres tipos de excepciones: excepciones no comprobadas o excepciones en tiempo de
  *         ejecución, excepciones comprobadas y errores.
  * 
- *         Las excepciones runtime extienden RuntimeException, no necesitan ser
- *         ni tratadas ni declaradas. Pueden ser lanzadas por el programador o
+ *         Las excepciones runtime extienden RuntimeException, no necesitan ser ni tratadas ni declaradas. Pueden ser lanzadas por el programador o
  *         por la Java Virtual Machine y estas son las más comunes:
  * 
  *         1. ArithmeticException
@@ -48,18 +46,15 @@ package es.smartcoding.oca.seccion6;
  *         
  *         int i = Integer.parseInt("alpha");
  * 
- *         Las excepciones comprobadas con Exception's que no son
- *         RuntimeException's. Pueden ser lanzadas por el programador o por la
+ *         Las excepciones comprobadas con Exception's que no son RuntimeException's. Pueden ser lanzadas por el programador o por la
  *         Java Virtual Machine y estas son las más comunes:
  * 
  *         1. FileNotFoundException
  * 
  *         2. IOException
  * 
- *         Los errores son instancias de la clase java.lang.Error. Pueden ser
- *         lanzadas sólo por la Java Virtual Machine y no deberían ser ni
- *         tratadas ni declaradas. Los errores son raros pero quizan veas alguno
- *         de estos:
+ *         Los errores son instancias de la clase java.lang.Error. Pueden ser lanzadas sólo por la Java Virtual Machine y no deberían ser ni
+ *         tratadas ni declaradas. Los errores son raros pero quizan veas alguno de estos:
  *         
  *         1. ExceptionInInitizationError
  *         
