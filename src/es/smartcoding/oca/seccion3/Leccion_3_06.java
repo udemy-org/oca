@@ -22,14 +22,10 @@ import java.util.GregorianCalendar;
  * 
  *         Trabajando con fechas y horas
  * 
- *         Java 8 ha renovado completamente el trabajo con fechas, horas,
- *         períodos, y zonas horarias: con las clases LocalDate, LocalTime,
- *         LocalDateTime entre otras.
+ *         Java 8 ha renovado completamente el trabajo con fechas, horas, períodos, y zonas horarias: con las clases LocalDate, LocalTime, LocalDateTime entre otras.
  * 
- *         En el examen suele quedar claro el formato de las fechas (Unos paises
- *         utilizan el formato 'dd/MM/yyyy' como España, otros el formato
- *         'yyyy-MM-dd' como los Estados Unidos de Norte América), además Java
- *         usa un formato de 24 horas.
+ *         En el examen suele quedar claro el formato de las fechas (Unos paises utilizan el formato 'dd/MM/yyyy' como España, 
+ *         otros el formato 'yyyy-MM-dd' como los Estados Unidos de Norte América), además Java usa un formato de 24 horas.
  *
  */
 public class Leccion_3_06 {
@@ -85,9 +81,7 @@ public class Leccion_3_06 {
 		 * En versiones anteriores a Java 8, usábamos las clases Date y
 		 * Calendar.
 		 * 
-		 * Actualmente, la mayoria de constructores de la clase Date no están
-		 * recomendados (deprecated), y los meses empiezan en 0 lo que añade
-		 * confusión.
+		 * Actualmente, la mayoria de constructores de la clase Date no están recomendados (deprecated), y los meses empiezan en 0 lo que añade confusión.
 		 */
 		Date date1 = new Date();
 		System.out.println("date1: " + date1);
@@ -125,9 +119,8 @@ public class Leccion_3_06 {
 		// tiene ningún efecto:
 		date5.minusDays(1);
 		System.out.println("date5 minus 1 day: " + date5);
-		// En Java 8 Java define la clase Period. Hay cinco maneras de definir
-		// un período:
-
+		
+		// En Java 8 Java define la clase Period. Hay cinco maneras de definir un período
 		// Estos son algunos ejemplos de periodos (años, meses y días): Cada año
 		Period period1 = Period.ofYears(1);
 		System.out.println("period1: " + period1);
@@ -144,16 +137,12 @@ public class Leccion_3_06 {
 		Period period5 = Period.of(1, 0, 7);
 		System.out.println("period5: " + period5);
 		/*
-		 * Los períodos no se pueden encadenar al contrario que las fechas. Este
-		 * período es de siete días contrariamente a lo que parece porque el
-		 * método es static.
+		 * Los períodos no se pueden encadenar al contrario que las fechas. Este período es de siete días contrariamente a lo que parece porque el método es static.
 		 */
 		Period period6 = Period.ofYears(1).ofWeeks(1);
 		System.out.println("period6: " + period6);
 		/*
-		 * Si bien un período comprende un día o más, las instancias de la clase
-		 * Duration pueden contener el número de días, horas, minutos, segundos
-		 * y nanosegundos.
+		 * Si bien un período comprende un día o más, las instancias de la clase Duration pueden contener el número de días, horas, minutos, segundos y nanosegundos.
 		 * 
 		 * Ni Duration ni Instant (un instante) están presentes en el examen
 		 * pero te puede ser útil en tu día a día.
@@ -175,8 +164,7 @@ public class Leccion_3_06 {
 		System.out.println("format datetime: "
 				+ dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
 		/*
-		 * La clase DateTimeFormatter de Java 8 viene a ser como la clase
-		 * SimpleDateFormat de Java 7.
+		 * La clase DateTimeFormatter de Java 8 viene a ser como la clase SimpleDateFormat de Java 7.
 		 */
 		DateTimeFormatter shortDateTime = DateTimeFormatter
 				.ofLocalizedDate(FormatStyle.SHORT);
@@ -189,8 +177,7 @@ public class Leccion_3_06 {
 		// UnsupportedTemporalTypeException
 		// System.out.println(shortDateTime.format(time));
 		/*
-		 * Este código es equivalente al anterior. Se puede utilizar uno u otro
-		 * indistintamente.
+		 * Este código es equivalente al anterior. Se puede utilizar uno u otro indistintamente.
 		 */
 		System.out.println("date short date time format 2: "
 				+ date.format(shortDateTime));
@@ -199,16 +186,13 @@ public class Leccion_3_06 {
 		System.out.println("dateTime short date time format 2: "
 				+ dateTime.format(shortDateTime));
 		/*
-		 * Si por algún motivo no queremos utilizar los formatos predeterminados
-		 * (SHORT, MEDIUM, LONG o FULL), podemos crear nuestros propios formatos
+		 * Si por algún motivo no queremos utilizar los formatos predeterminados (SHORT, MEDIUM, LONG o FULL), podemos crear nuestros propios formatos
 		 * con los siguientes códigos:
 		 * 
-		 * MMMM representa el mes del año: M muestra el mes como un dígito. MM
-		 * muestra el mes como dos dígitos. MMM muestra el mes como por ejemplo
+		 * MMMM representa el mes del año: M muestra el mes como un dígito. MM muestra el mes como dos dígitos. MMM muestra el mes como por ejemplo
 		 * 'Ene' y MMMM muestra el mes como por ejemplo 'Enero'.
 		 * 
-		 * dd representa el dia del mes. Como en el caso del mes el numero de
-		 * d's determina el formato del dia.
+		 * dd representa el dia del mes. Como en el caso del mes el numero de d's determina el formato del dia.
 		 * 
 		 * yyyy representa el año.
 		 * 
@@ -238,3 +222,10 @@ public class Leccion_3_06 {
 	}
 
 }
+
+
+
+
+
+
+
